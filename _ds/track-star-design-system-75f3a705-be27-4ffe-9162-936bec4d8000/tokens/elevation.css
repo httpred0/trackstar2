@@ -1,0 +1,39 @@
+/* What changes between themes is more than colour. Light separates layers with a
+   one-pixel border and no shadow; dark separates with shadow and an almost invisible
+   inset line. Both come out of --card-border and --card-lift, so .card is one rule. */
+:root{
+--card-border:1px solid var(--border-hairline); /* @kind other */
+--card-lift:none; /* @kind shadow */
+--scrim:none; /* @kind other */               /* photography needs no scrim on tan */
+--elevation-card:0 2px 8px rgba(12,12,12,.07);
+--elevation-screen:0 24px 60px rgba(12,12,12,.13);
+--elevation-on-air:0 0 60px rgba(255,91,0,.20);
+--ease-stage:cubic-bezier(.22,.61,.36,1); /* @kind other */
+--noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); /* @kind other */
+}
+@media (prefers-color-scheme:dark){
+:root{
+--card-border:1px solid rgba(237,231,223,.10); /* @kind other */
+--card-lift:0 14px 30px rgba(0,0,0,.5); /* @kind shadow */
+--scrim:linear-gradient(to top,rgba(5,5,6,.92),rgba(5,5,6,.15) 60%,transparent); /* @kind other */
+--elevation-card:0 14px 30px rgba(0,0,0,.5);
+--elevation-screen:0 40px 90px rgba(0,0,0,.68);
+--elevation-on-air:0 0 80px rgba(255,91,0,.34);
+}
+}
+[data-theme="light"]{
+--card-border:1px solid var(--border-hairline); /* @kind other */
+--card-lift:none; /* @kind shadow */
+--scrim:none; /* @kind other */
+--elevation-card:0 2px 8px rgba(12,12,12,.07);
+--elevation-screen:0 24px 60px rgba(12,12,12,.13);
+--elevation-on-air:0 0 60px rgba(255,91,0,.20);
+}
+[data-theme="dark"]{
+--card-border:1px solid rgba(237,231,223,.10); /* @kind other */
+--card-lift:0 14px 30px rgba(0,0,0,.5); /* @kind shadow */
+--scrim:linear-gradient(to top,rgba(5,5,6,.92),rgba(5,5,6,.15) 60%,transparent); /* @kind other */
+--elevation-card:0 14px 30px rgba(0,0,0,.5);
+--elevation-screen:0 40px 90px rgba(0,0,0,.68);
+--elevation-on-air:0 0 80px rgba(255,91,0,.34);
+}

@@ -1,0 +1,22 @@
+:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;
+/* Production ships two radii, 14 and 9. Ours keeps a third: 3px for album covers, because a
+   sleeve is a physical object. Radii by hierarchy, not one value everywhere. */
+--radius-none:0;--radius-sm:3px;--radius-md:9px;--radius-lg:14px;--radius-pill:999px;
+--gap-tight:var(--space-2);--gap-default:var(--space-3);--gap-loose:var(--space-5);
+--pad-card:var(--space-4);--pad-section:var(--space-6);
+--corner-cover:var(--radius-sm);--corner-card:var(--radius-lg);--corner-pill:var(--radius-pill);
+
+/* The shared page grid, matched to production. 393px is the implementation reference width; the
+   gutter is fixed at every supported width and the rail between the gutters is fluid, never
+   hard-coded. Mobile first means one layout that scales up, not a breakpoint per device. */
+--gutter:24px;
+--tap-min:44px;                                /* nothing tappable is smaller */
+--tap-gap:8px;
+--header-h:52px;                               /* one height at every width */
+--reading-column:680px;                        /* the Feed's surface, and the cap on the shared tabs picker (SOF-306) */
+--modal-max:88svh; /* @kind spacing */         /* svh, never vh — vh lies on mobile */
+--wrap-max:920px;--wrap-pad:var(--gutter);
+}
+@media (min-width:768px){:root{--pad-section:var(--space-7)}}
+@media (min-width:1024px){:root{--pad-section:var(--space-8)}}

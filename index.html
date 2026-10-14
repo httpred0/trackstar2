@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<meta name="ext-resource-dependency" content="./assets/export/plx-1-sky.webp" data-resource-id="r_plx_1_sky_png" />
+<meta name="ext-resource-dependency" content="./assets/export/plx-2-distant.webp" data-resource-id="r_plx_2_distant_png" />
+<meta name="ext-resource-dependency" content="./assets/export/plx-3-mid.webp" data-resource-id="r_plx_3_mid_png" />
+<meta name="ext-resource-dependency" content="./assets/export/plx-4-fore.webp" data-resource-id="r_plx_4_fore_png" />
+<meta name="ext-resource-dependency" content="./assets/export/placa.webp" data-resource-id="r_placa_png" />
+<meta name="ext-resource-dependency" content="./assets/export/adesivo-nyc.webp" data-resource-id="r_adesivo_nyc_png" />
+<meta name="ext-resource-dependency" content="./assets/export/foto.webp" data-resource-id="r_foto_png" />
+<meta name="ext-resource-dependency" content="./assets/export/vinil.webp" data-resource-id="r_vinil_png" />
+<meta name="ext-resource-dependency" content="./assets/export/adesivo.webp" data-resource-id="r_adesivo_png" />
+<meta name="ext-resource-dependency" content="./assets/export/fone.webp" data-resource-id="r_fone_png" />
+<meta name="ext-resource-dependency" content="./assets/export/fita.webp" data-resource-id="r_fita_png" />
+<meta name="ext-resource-dependency" content="./assets/export/cafe.webp" data-resource-id="r_cafe_png" />
+<meta name="ext-resource-dependency" content="./assets/export/microfone.webp" data-resource-id="r_microfone_png" />
+<meta name="ext-resource-dependency" content="./assets/logo-trackstar-orange.svg" data-resource-id="r_logo_trackstar_orange_svg" />
+<meta name="ext-resource-dependency" content="./assets/export/avatar-me.webp" data-resource-id="r_avatar_me_png" />
+<meta name="ext-resource-dependency" content="./assets/export/bg-wall-dark3.webp" data-resource-id="r_bg_wall_dark3_jpg" />
+<meta name="ext-resource-dependency" content="./assets/export/bg-wall-light.webp" data-resource-id="r_bg_wall_light_jpg" />
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="preconnect" href="https://use.typekit.net" crossorigin="">
+<link rel="stylesheet" href="https://use.typekit.net/yto0mgb.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/colors.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/typography.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/motion.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/layout.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/base.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/styles.css">
+<script src="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/_ds_bundle.js"></script>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#0A0A0B}a{color:var(--text-primary);text-decoration:none}a:hover{color:var(--accent-default)}img{user-select:none;-webkit-user-drag:none}[data-glass] *{background-color:transparent!important;box-shadow:none!important;border-color:transparent!important}</style>
+</helmet>
+<div ref="{{ root }}" data-theme="{{ theme }}" style="position:fixed; inset:0; overflow:hidden; background:{{ wallBg }}; color:var(--text-primary); font-family:var(--font-ui); letter-spacing:-.02em;">
+  <sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}">
+    <div data-plxbox="1" aria-hidden="true" style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+      <div data-plx="0" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_1_sky_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div data-plx="1" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_2_distant_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div data-plx="2" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_3_mid_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div data-plx="3" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_4_fore_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(247,237,223,.94) 0%, rgba(247,237,223,.82) 13%, rgba(247,237,223,.35) 22%, rgba(247,237,223,0) 30%, rgba(247,237,223,0) 70%, rgba(247,237,223,.35) 78%, rgba(247,237,223,.82) 86%, rgba(247,237,223,.94) 100%);"></div>
+    </div>
+  </sc-if>
+
+  <div data-stagebox="1" style="position:absolute; top:0; bottom:0; left:clamp(260px,22vw,420px); right:clamp(260px,22vw,420px); container-type:size; display:flex; justify-content:center; align-items:flex-end; pointer-events:none;">
+    <div style="position:relative; height:min(100cqh, 112cqw); aspect-ratio:1330 / 1490;">
+
+      <div data-obj="1" data-depth="0.22" data-tw="0.3" style="position:absolute; left:-22.8%; top:-8%; width:94%; z-index:1; opacity:0; perspective:1400px; filter:blur(0.5px);">
+        <img data-shadow="1" src="assets/export/placa.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(13px); opacity:0.27;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/placa.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/placa.webp" alt="Street pole at Mulberry and Kenmare" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="0.5" style="position:absolute; left:-7.5%; top:6%; width:11%; z-index:0; opacity:0; perspective:900px; transform:rotate(46deg); filter:blur(0.4px);">
+        <img data-shadow="1" src="assets/export/adesivo-nyc.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(8px); opacity:0.38;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/adesivo-nyc.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/adesivo-nyc.webp" alt="NYC sticker" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="0.9" style="position:absolute; left:-12%; top:21%; width:16.4%; z-index:3; opacity:0; perspective:1000px; transform:rotate(-20deg);">
+        <img data-shadow="1" src="assets/export/foto.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(10px); opacity:0.34;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/foto.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/foto.webp" alt="Polaroid of the Manhattan Bridge" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="0.6" style="position:absolute; left:32.5%; top:-3%; width:50%; z-index:2; opacity:0; perspective:1000px; filter:blur(0.6px);">
+        <img data-shadow="1" src="assets/export/vinil.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(11px); opacity:0.38;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/vinil.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/vinil.webp" alt="Vinyl record" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="0.95" style="position:absolute; left:31.8%; top:20%; width:12.2%; z-index:3; opacity:0; perspective:800px; transform:rotate(-6deg);">
+        <img data-shadow="1" src="assets/export/adesivo.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(6px); opacity:0.42;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/adesivo.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/adesivo.webp" alt="Smiley sticker" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="0.55" style="position:absolute; left:27%; top:29%; width:51%; z-index:4; opacity:0; perspective:1000px;">
+        <img data-shadow="1" src="assets/export/fone.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(13px); opacity:0.46;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/fone.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/fone.webp" alt="Headphones" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="0.72" style="position:absolute; left:52%; top:68.5%; width:27%; z-index:5; opacity:0; perspective:900px; transform:rotate(-11deg);">
+        <img data-shadow="1" src="assets/export/fita.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(10px); opacity:0.46;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/fita.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/fita.webp" alt="Mixtape cassette" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="1" style="position:absolute; left:32%; top:79%; width:32.7%; z-index:5; opacity:0; perspective:900px; transform:rotate(-14deg);">
+        <img data-shadow="1" src="assets/export/cafe.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(11px); opacity:0.42;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/cafe.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/cafe.webp" alt="Coffee cup" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+      <div data-obj="1" data-depth="0.5" data-tw="0.5" style="position:absolute; left:-29%; top:47.5%; width:56.5%; z-index:6; opacity:0; perspective:1000px; transform:rotate(-16deg);">
+        <img data-shadow="1" src="assets/export/microfone.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(0) sepia(1) hue-rotate(-15deg) saturate(2) brightness(.35) blur(13px); opacity:0.49;">
+        <div data-body="1" style="position:relative; transform-style:preserve-3d;">
+          <img data-edge="1" src="assets/export/microfone.webp" alt="" style="position:absolute; left:0; top:0; width:100%; filter:brightness(.5) saturate(1.15);">
+          <img src="assets/export/microfone.webp" alt="Track Star microphone" style="position:relative; display:block; width:100%;">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <nav data-navbox="1" aria-label="Main" style="position:absolute; left:32px; bottom:32px; z-index:20; width:180px; display:flex; flex-direction:column; align-items:stretch;">
+    <a href="#" data-nav="1" data-rot="0" data-ix="0" aria-current="page" style="position:relative; display:flex; align-items:center; justify-content:space-between; gap:10px; min-height:42px; padding:0 4px 0 16px; font-size:18px; line-height:24px; font-weight:500; color:var(--text-primary); touch-action:manipulation;" style-before="content:''; position:absolute; left:0; top:11px; bottom:11px; width:2px; border-radius:2px; background:var(--accent-default);">Episodes<span style="display:flex; color:var(--accent-default);"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:block; flex:none;"><path d="M4 12h15"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+    <a href="#" data-nav="1" data-rot="0" data-ix="0" style="display:flex; align-items:center; min-height:42px; padding:0 4px 0 16px; font-size:18px; line-height:24px; font-weight:400; color:var(--text-secondary); touch-action:manipulation;" style-hover="color:var(--text-primary);">Formats</a>
+    <a href="#" data-nav="1" data-rot="0" data-ix="0" style="display:flex; align-items:center; min-height:42px; padding:0 4px 0 16px; font-size:18px; line-height:24px; font-weight:400; color:var(--text-secondary); touch-action:manipulation;" style-hover="color:var(--text-primary);">Trackstar 100</a>
+    <a href="#" data-nav="1" data-rot="0" data-ix="0" style="display:flex; align-items:center; min-height:42px; padding:0 4px 0 16px; font-size:18px; line-height:24px; font-weight:400; color:var(--text-secondary); touch-action:manipulation;" style-hover="color:var(--text-primary);">Reviews</a>
+    <a href="#" data-nav="1" data-rot="0" data-ix="0" style="display:flex; align-items:center; min-height:42px; padding:0 4px 0 16px; font-size:18px; line-height:24px; font-weight:400; color:var(--text-secondary); touch-action:manipulation;" style-hover="color:var(--text-primary);">Lists</a>
+    <a href="#" data-nav="1" data-rot="0" data-ix="0" style="display:flex; align-items:center; min-height:42px; padding:0 4px 0 16px; font-size:18px; line-height:24px; font-weight:400; color:var(--text-secondary); touch-action:manipulation;" style-hover="color:var(--text-primary);">About</a>
+    <div aria-hidden="true" style="height:1px; margin:16px 0 20px; background:var(--border-hairline);"></div>
+    <a href="#" style="align-self:stretch; display:flex; align-items:center; justify-content:space-between; gap:10px; min-height:46px; padding:0 16px 0 18px; border-radius:999px; background:var(--accent-default); color:var(--text-on-accent); font-size:16px; letter-spacing:-.02em; font-weight:500; box-shadow:0 1px 1px rgba(60,35,15,.10), 0 10px 18px -10px rgba(60,35,15,.45); touch-action:manipulation;" style-hover="background:var(--accent-hover); color:var(--text-on-accent);">Start rating<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:block; flex:none;"><path d="M4 12h15"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+    <a href="/arcade" style="align-self:stretch; margin-top:10px; display:flex; align-items:center; justify-content:space-between; gap:10px; min-height:46px; padding:0 16px 0 18px; border-radius:999px; border:1.5px solid var(--text-primary); color:var(--text-primary); font-size:16px; font-weight:500; letter-spacing:-.02em; touch-action:manipulation; transition:background .2s var(--ease-stage);" style-hover="background:rgba(60,35,15,.06); color:var(--text-primary);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;">The Arcade<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:block; flex:none;"><path d="M6 11h4"></path><path d="M8 9v4"></path><path d="M15 12h.01"></path><path d="M18 10h.01"></path><path d="M17.3 5H6.7a4 4 0 0 0-3.98 3.6L2 15.4A2.9 2.9 0 0 0 7.1 17.6L9 15.5h6l1.9 2.1A2.9 2.9 0 0 0 22 15.4l-.72-6.8A4 4 0 0 0 17.3 5z"></path></svg></a>
+  </nav>
+
+  <header data-topbar="1" style="position:absolute; top:24px; left:50px; right:clamp(24px,3vw,56px); z-index:30; height:56px; display:flex; align-items:center; justify-content:space-between; pointer-events:none;">
+  <div style="pointer-events:auto; display:flex;">
+<a href="#" aria-label="Track Star home" style="display:flex; align-items:center;">
+    <img src="assets/logo-trackstar-orange.svg" alt="Track Star" style="height:54px; width:auto; display:block;">
+  </a>
+  </div>
+  <div style="pointer-events:auto; display:flex;">
+<div data-profile="1" style="position:relative; display:flex; align-items:center; gap:6px;">
+      <button type="button" aria-label="Notifications" style="position:relative; width:44px; height:44px; border:0; padding:0; border-radius:50%; display:grid; place-items:center; background:transparent; color:var(--text-primary); cursor:pointer;" style-hover="background:rgba(60,35,15,.07);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+        <span style="position:absolute; top:10px; right:11px; width:8px; height:8px; border-radius:50%; background:var(--accent-default); box-shadow:0 0 0 2px {{ glass.dotRing }};"></span>
+      </button>
+      <div style="position:relative; display:flex;">
+        <button type="button" onClick="{{ toggleMenu }}" aria-label="Your profile" aria-haspopup="menu" aria-expanded="{{ menuOpen }}" style="display:flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; border:0; padding:0; border-radius:50%; background:transparent; cursor:pointer;">
+          <x-import component-from-global-scope="TrackStarDesignSystem_75f3a7.Avatar" name="Pedro" src="{{ R.r_avatar_me_png }}" size="{{ avatarSize }}" hint-size="36px,36px"></x-import>
+        </button>
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <div role="menu" style="position:absolute; top:calc(100% + 12px); right:-6px; width:240px; padding:6px; display:flex; flex-direction:column; gap:2px; background:{{ glass.menu }}; -webkit-backdrop-filter:blur(22px) saturate(1.5); backdrop-filter:blur(22px) saturate(1.5); color:var(--text-primary); border:0; border-radius:var(--corner-card); box-shadow:{{ glass.menuShadow }};">
+          <span style="padding:10px 14px 6px; font-size:12px; font-weight:500; color:var(--text-muted);">@johncena</span>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"></path></svg></span><span>Profile</span></a>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg></span><span>My ratings</span></a>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11"></path><path d="M9 12h11"></path><path d="M9 18h11"></path><path d="M4 6h.01"></path><path d="M4 12h.01"></path><path d="M4 18h.01"></path></svg></span><span>My lists</span></a>
+          <span style="height:1px; margin:6px 8px; background:var(--border-hairline);"></span>
+          <div style="display:flex; flex-direction:column; gap:8px; padding:6px;">
+            <span style="padding:0 8px; font-size:12px; font-weight:500; color:var(--text-muted);">Theme</span>
+            <div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:2px; padding:3px; border-radius:12px; background:rgba(60,35,15,.07);">
+              <sc-for list="{{ themeOpts }}" as="th" hint-placeholder-count="2">
+                <button type="button" onClick="{{ th.pick }}" style="min-height:36px; border:0; border-radius:9px; font:inherit; font-size:13px; font-weight:500; cursor:pointer; background:{{ th.bg }}; color:{{ th.color }}; box-shadow:{{ th.shadow }}; transition:background .25s var(--ease-stage), color .25s var(--ease-stage), box-shadow .25s var(--ease-stage);">{{ th.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <span style="height:1px; margin:6px 8px; background:var(--border-hairline);"></span>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"></path><path d="M10 16l-4-4 4-4"></path><path d="M6 12h10"></path></svg></span><span>Sign out</span></a>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+  <div data-glass="1" style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:clamp(260px,30vw,460px); pointer-events:auto; padding:3px; border-radius:999px; background:{{ glass.bg }}; -webkit-backdrop-filter:blur(18px) saturate(1.5); backdrop-filter:blur(18px) saturate(1.5); box-shadow:{{ glass.shadow }};">
+    <x-import component-from-global-scope="TrackStarDesignSystem_75f3a7.SearchBar" placeholder="Search songs, episodes, people" style="width:100%; background:transparent; border:0; box-shadow:none;" hint-size="100%,44px"></x-import>
+  </div>
+  </header>
+  <aside data-rail="1" aria-label="Latest episodes" style="position:absolute; top:96px; bottom:0; right:calc(clamp(24px,3vw,56px) - 48px); width:clamp(170px,13vw,240px); padding:0 48px; box-sizing:content-box; z-index:10; overflow:hidden; -webkit-mask-image:linear-gradient(to bottom, transparent 0, #000 64px); mask-image:linear-gradient(to bottom, transparent 0, #000 64px);">
+    <div data-track="1" style="display:flex; flex-direction:column; gap:36px; padding:24px 0; will-change:transform;">
+      <sc-for list="{{ eps }}" as="ep" hint-placeholder-count="6">
+        <a data-card="1" href="{{ ep.url }}" target="_blank" rel="noopener" style="position:relative; display:block; perspective:900px; touch-action:manipulation;">
+          <div aria-hidden="true" style="position:absolute; left:2%; right:2%; top:0; aspect-ratio:16 / 9; border-radius:8px; box-shadow:2px 4px 6px rgba(60,35,15,.20), 10px 18px 26px -6px rgba(60,35,15,.30), 22px 34px 44px -18px rgba(60,35,15,.22); pointer-events:none;"></div>
+          <div data-tilt="1" style="position:relative; aspect-ratio:16 / 9; transform-style:preserve-3d;">
+            <div style="position:absolute; inset:0; border-radius:6px; background:#1A1416; transform:translateZ(-5px); box-shadow:0 1px 2px rgba(60,35,15,.10), 0 8px 14px -6px rgba(60,35,15,.16), 0 22px 30px -18px rgba(60,35,15,.22);"></div>
+            <div style="position:absolute; inset:0; border-radius:6px; background:#2A2326; transform:translateZ(-2.5px);"></div>
+            <img data-src="{{ ep.img }}" alt="{{ ep.name }}" data-ytid="{{ ep.id }}" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:6px; box-shadow:inset 0 0 0 1px rgba(255,255,255,.06); display:block; background:#151113;">
+            <div data-cap="1" data-surface="stage" style="position:absolute; left:6px; bottom:-12px; transform:translateZ(36px); opacity:0; max-width:calc(100% - 6px);">
+              <div style="zoom:.8; white-space:nowrap;">
+                <x-import component-from-global-scope="TrackStarDesignSystem_75f3a7.Chyron" size="card" kicker="{{ ep.kicker }}" name="{{ ep.name }}" hint-size="160px,34px"></x-import>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px; padding:14px 2px 0;">
+            <span style="font-size:14px; line-height:18px; font-weight:500; letter-spacing:-.015em; color:var(--text-primary); text-wrap:balance;">{{ ep.title }}</span>
+            <span style="font-size:10.5px; line-height:14px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--text-secondary);">{{ ep.tags }}</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </aside>
+
+</div>
+</x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#F5E8D6"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#F5E8D6"/><circle cx="660" cy="400" r="190" fill="#141314"/><circle cx="660" cy="400" r="62" fill="#FF5B00"/><rect x="380" y="220" width="360" height="360" rx="6" fill="#FF5B00"/><text x="560" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="120" fill="#FFF4E9">TS</text></svg></template>
+<script type="text/x-dc" data-dc-script data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;'light'|'dark'&quot;},&quot;intensity&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;default&quot;:1,&quot;tsType&quot;:&quot;number&quot;},&quot;railDrift&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+function __R(k, f) { return (window.__resources && window.__resources[k]) || f; }
+class Component extends DCLogic {
+  root = React.createRef();
+  renderVals() {
+    const base = [
+      { id: 'CrMmq0zNPCU', name: 'Reynolds vs Branagh', kicker: 'Versus', title: 'Ryan Reynolds vs Kenneth Branagh', tags: 'Versus · ’80s rock · New wave' },
+      { id: 'hDieN4HwW_I', name: 'Elvis Costello', kicker: null, title: 'Testing Elvis Costello', tags: 'Pop · Rock · Soul' },
+      { id: 'NGegRQ6hvHE', name: 'Legs McNeil', kicker: null, title: 'Testing Legs McNeil', tags: 'Punk · ’70s New York' },
+      { id: 'B0yTSYM6sFc', name: 'Queen Latifah', kicker: null, title: 'Testing Queen Latifah', tags: 'Hip hop · Soul' },
+      { id: '0X-ANnMQ_FQ', name: 'Ravi Coltrane', kicker: null, title: 'Ravi Coltrane on his father’s catalog', tags: 'Jazz' },
+      { id: 'yqtnKQma9DI', name: 'Grandmaster Flash', kicker: null, title: 'Grandmaster Flash', tags: 'Hip hop · Turntablism' },
+    ].map(e => ({
+      ...e,
+      img: `https://i.ytimg.com/vi/${e.id}/maxresdefault.jpg`,
+      url: `https://www.youtube.com/watch?v=${e.id}`,
+    }));
+    return { R: {r_plx_1_sky_png: __R('r_plx_1_sky_png', 'assets/export/plx-1-sky.webp'), r_plx_2_distant_png: __R('r_plx_2_distant_png', 'assets/export/plx-2-distant.webp'), r_plx_3_mid_png: __R('r_plx_3_mid_png', 'assets/export/plx-3-mid.webp'), r_plx_4_fore_png: __R('r_plx_4_fore_png', 'assets/export/plx-4-fore.webp'), r_placa_png: __R('r_placa_png', 'assets/export/placa.webp'), r_adesivo_nyc_png: __R('r_adesivo_nyc_png', 'assets/export/adesivo-nyc.webp'), r_foto_png: __R('r_foto_png', 'assets/export/foto.webp'), r_vinil_png: __R('r_vinil_png', 'assets/export/vinil.webp'), r_adesivo_png: __R('r_adesivo_png', 'assets/export/adesivo.webp'), r_fone_png: __R('r_fone_png', 'assets/export/fone.webp'), r_fita_png: __R('r_fita_png', 'assets/export/fita.webp'), r_cafe_png: __R('r_cafe_png', 'assets/export/cafe.webp'), r_microfone_png: __R('r_microfone_png', 'assets/export/microfone.webp'), r_logo_trackstar_orange_svg: __R('r_logo_trackstar_orange_svg', 'assets/logo-trackstar-orange.svg'), r_avatar_me_png: __R('r_avatar_me_png', 'assets/export/avatar-me.webp'), r_bg_wall_dark3_jpg: __R('r_bg_wall_dark3_jpg', 'assets/export/bg-wall-dark3.webp'), r_bg_wall_light_jpg: __R('r_bg_wall_light_jpg', 'assets/export/bg-wall-light.webp')}, isLight: ((this.state && this.state.theme) || this.props.theme || 'light') !== 'dark', root: this.root, menuOpen: !!(this.state && this.state.menuOpen), avatarSize: 36, toggleMenu: () => this.setState(st => ({ menuOpen: !(st && st.menuOpen) })), theme: (this.state && this.state.theme) || this.props.theme || 'light', ...(() => { const dk = ((this.state && this.state.theme) || this.props.theme || 'light') === 'dark'; return {
+      wallBg: dk ? '#0A0A0B url(' + __R('r_bg_wall_dark3_jpg', 'assets/export/bg-wall-dark3.webp') + ') center / cover no-repeat' : '#F6EEE2 url(' + __R('r_bg_wall_light_jpg', 'assets/export/bg-wall-light.webp') + ') center / cover no-repeat',
+      glass: dk ? { bg: 'linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04))', shadow: 'inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.08), 0 14px 32px -16px rgba(0,0,0,.6)', menu: 'linear-gradient(180deg, rgba(28,28,30,.88), rgba(18,18,20,.84))', menuShadow: 'inset 0 1px 0 rgba(255,255,255,.08), inset 0 0 0 1px rgba(255,255,255,.06), 0 22px 44px -18px rgba(0,0,0,.7)', dotRing: '#111113' }
+        : { bg: 'linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.16))', shadow: 'inset 0 1px 0 rgba(255,255,255,.75), inset 0 0 0 1px rgba(255,255,255,.38), inset 0 -1px 0 rgba(60,35,15,.06), 0 1px 2px rgba(60,35,15,.06), 0 14px 32px -16px rgba(60,35,15,.30)', menu: 'linear-gradient(180deg, rgba(255,251,245,.86), rgba(252,245,236,.80))', menuShadow: 'inset 0 1px 0 rgba(255,255,255,.7), inset 0 0 0 1px rgba(255,255,255,.35), 0 1px 2px rgba(60,35,15,.08), 0 22px 44px -18px rgba(60,35,15,.38)', dotRing: '#F3E7D6' } }; })(), themeOpts: ['light', 'dark'].map(v => { const cur = (this.state && this.state.theme) || this.props.theme || 'light'; const on = cur === v; return { label: v === 'light' ? 'Light' : 'Dark', pick: () => this.setState({ theme: v }), bg: on ? (v === 'dark' ? '#2C2C2F' : '#FFFAF3') : 'transparent', color: on ? 'var(--text-primary)' : 'var(--text-secondary)', shadow: on ? '0 1px 2px rgba(60,35,15,.12), inset 0 0 0 1px rgba(60,35,15,.06)' : 'none' }; }), eps: base.concat(base, base, base) };
+  }
+  componentDidMount() {
+    this.plx = { mx: 0, my: 0, cx: 0, cy: 0 };
+    this.onPlxMove = ev => { this.plx.mx = (ev.clientX / window.innerWidth) * 2 - 1; this.plx.my = (ev.clientY / window.innerHeight) * 2 - 1; };
+    window.addEventListener('pointermove', this.onPlxMove, { passive: true });
+    const K = [0, 8, 20, 38], still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const plxTick = () => {
+      this.plxRaf = requestAnimationFrame(plxTick);
+      const rt = this.root.current, box = rt && rt.querySelector('[data-plxbox]'); if (!box || still) return;
+      const p = this.plx; p.cx += (p.mx - p.cx) * 0.05; p.cy += (p.my - p.cy) * 0.05;
+      box.querySelectorAll('[data-plx]').forEach(l => { const k = K[+l.dataset.plx]; l.style.transform = 'translate3d(' + (-p.cx * k).toFixed(2) + 'px,' + (-p.cy * k * 0.5).toFixed(2) + 'px,0)'; });
+    };
+    plxTick();
+    const root = this.root.current;
+    if (!root) return;
+    setTimeout(() => {
+      const jobs = (this.objs || []).map(o => new Promise(res => {
+        const src = o.body && o.body.querySelector('img') ? o.body.querySelector('img').src : null;
+        if (!src) return res();
+        const im = new Image();
+        im.onload = () => {
+          try {
+            const w = 200, h = Math.max(1, Math.round(200 * im.height / im.width));
+            const cv = document.createElement('canvas'); cv.width = w; cv.height = h;
+            const cx = cv.getContext('2d'); cx.drawImage(im, 0, 0, w, h);
+            const d = cx.getImageData(0, 0, w, h).data;
+            let a = w, b = -1;
+            for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) if (d[(y * w + x) * 4 + 3] > 40) { if (x < a) a = x; if (x > b) b = x; }
+            if (b > a) o.ab = [a / w, (b + 1) / w];
+          } catch (e) {}
+          res();
+        };
+        im.onerror = () => res();
+        im.src = src;
+      }));
+      Promise.all(jobs).then(() => this.measure && this.measure());
+    }, 0);
+    const fixThumb = im => { const id = im.dataset.ytid; if (id && !im.dataset.fb && (im.naturalWidth <= 120)) { im.dataset.fb = '1'; im.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`; } };
+    root.addEventListener('error', e => { if (e.target.tagName === 'IMG') fixThumb(e.target); }, true);
+    root.addEventListener('load', e => { if (e.target.tagName === 'IMG') fixThumb(e.target); }, true);
+    this.rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.m = { x: 0, y: 0, tx: 0, ty: 0, px: -9999, py: -9999 };
+    this.objs = [...root.querySelectorAll('[data-obj]')].map((el, i) => ({
+      el, body: el.querySelector('[data-body]'), edge: el.querySelector('[data-edge]'), shadow: el.querySelector('[data-shadow]'),
+      d: +el.dataset.depth, ph: i * 1.7, delay: 0.15 + i * 0.09, cx: 0, cy: 0, r: 1, pxv: 0, pyv: 0,
+    }));
+    this.objs.forEach(o => {
+      o.layers = [];
+      if (!o.edge) return;
+      const N = 9;
+      for (let j = 0; j < N; j++) {
+        const c = o.edge.cloneNode();
+        const f = j / (N - 1);
+        c.style.filter = `brightness(${(0.52 + 0.3 * f).toFixed(3)}) saturate(1.15)`;
+        o.edge.parentNode.insertBefore(c, o.edge.parentNode.lastElementChild);
+        o.layers.push({ el: c, f: 1 - f * 0.92 });
+      }
+    });
+    this.objs.forEach(o => {
+      const main = o.body.lastElementChild;
+      if (main && main.tagName === 'IMG') {
+        const src = main.getAttribute('src');
+        const lit = document.createElement('div');
+        const mk = `url(${src}) 0 0 / 100% 100% no-repeat`;
+        lit.style.cssText = `position:absolute; inset:0; pointer-events:none; background:linear-gradient(128deg, rgba(255,236,200,.38) 0%, rgba(255,236,200,0) 38%, rgba(30,15,0,0) 58%, rgba(30,15,0,.34) 100%); mix-blend-mode:soft-light; -webkit-mask:${mk}; mask:${mk};`;
+        const amb = document.createElement('div');
+        amb.style.cssText = `position:absolute; inset:0; pointer-events:none; background:linear-gradient(128deg, rgba(0,0,0,0) 45%, rgba(40,22,5,.22) 100%); mix-blend-mode:multiply; -webkit-mask:${mk}; mask:${mk};`;
+        o.body.appendChild(amb); o.body.appendChild(lit);
+      }
+      if (o.shadow) {
+        const cs = o.shadow.cloneNode();
+        cs.style.filter = cs.style.filter.replace(/blur\(\d+px\)/, 'blur(3px)');
+        cs.style.opacity = (parseFloat(o.shadow.style.opacity) * 0.55).toFixed(2);
+        o.shadow.parentNode.insertBefore(cs, o.shadow.nextSibling);
+        o.contact = cs;
+      }
+    });
+    this.navs = [...root.querySelectorAll('[data-nav]')].map(el => ({
+      el, base: +el.dataset.rot, ix: +el.dataset.ix, x: +el.dataset.ix, y: 0, r: +el.dataset.rot, vx: 0, vy: 0, vr: 0,
+    }));
+    this.rail = root.querySelector('[data-rail]');
+    this.track = root.querySelector('[data-track]');
+    root.querySelectorAll('img[data-src]').forEach(im => { if (!im.getAttribute('src')) im.src = im.dataset.src; });
+    this.stagebox = root.querySelector('[data-stagebox]');
+    this.cards = [...root.querySelectorAll('[data-card]')].map(el => ({
+      el, tilt: el.querySelector('[data-tilt]'), cap: el.querySelector('[data-cap]'), rx: 0, ry: -14, z: 0, c: 0,
+    }));
+    this.scroll = 0; this.vel = 0; this.hNav = -1; this.hCard = null; this.overRail = false;
+    this.onMove = e => {
+      const m = this.m;
+      m.tx = (e.clientX / innerWidth) * 2 - 1; m.ty = (e.clientY / innerHeight) * 2 - 1;
+      m.px = e.clientX; m.py = e.clientY;
+      const t = e.target instanceof Element ? e.target : null;
+      const nav = t && t.closest('[data-nav]');
+      this.hNav = nav ? this.navs.findIndex(n => n.el === nav) : -1;
+      this.hCard = t && t.closest('[data-card]');
+      this.overRail = !!(t && t.closest('[data-rail]'));
+    };
+    this.onLeave = () => { this.m.tx = 0; this.m.ty = 0; this.m.px = -9999; this.hNav = -1; this.hCard = null; this.overRail = false; };
+    this.onWheel = e => { e.preventDefault(); this.vel += e.deltaY * 2.2; };
+    this.onResize = () => this.measure();
+    this.onDocClick = e => { if (this.state && this.state.menuOpen && !(e.target instanceof Element && e.target.closest('[data-profile]'))) this.setState({ menuOpen: false }); };
+    document.addEventListener('click', this.onDocClick);
+    window.addEventListener('pointermove', this.onMove);
+    document.addEventListener('pointerleave', this.onLeave);
+    this.rail.addEventListener('wheel', this.onWheel, { passive: false });
+    window.addEventListener('resize', this.onResize);
+    this.measure();
+    setTimeout(() => this.measure(), 600);
+    this.t0 = performance.now() / 1000; this.last = this.t0;
+    const loop = now => { this.frame(now / 1000); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.plxRaf); window.removeEventListener('pointermove', this.onPlxMove);
+    cancelAnimationFrame(this.raf);
+    document.removeEventListener('click', this.onDocClick);
+    window.removeEventListener('pointermove', this.onMove);
+    document.removeEventListener('pointerleave', this.onLeave);
+    window.removeEventListener('resize', this.onResize);
+    if (this.rail) this.rail.removeEventListener('wheel', this.onWheel);
+  }
+  measure() {
+    const root = this.root.current;
+    const z = Math.min(1, innerWidth / 1400, innerHeight / 880);
+    this.z = z;
+    root.style.width = (innerWidth / z) + 'px'; root.style.height = (innerHeight / z) + 'px';
+    root.style.right = 'auto'; root.style.bottom = 'auto';
+    root.style.transformOrigin = '0 0'; root.style.transform = z < 1 ? `scale(${z})` : '';
+    const VW = innerWidth / z;
+    const BR = el => { const r = el.getBoundingClientRect(); return { left: r.left / z, right: r.right / z, width: r.width / z, top: r.top / z }; };
+    const narrow = false;
+    this.rail.style.display = narrow ? 'none' : '';
+    const nb = this.root.current.querySelector('[data-navbox]');
+    if (nb) { const s = 1; nb.style.transform = `scale(${s.toFixed(3)})`; nb.style.transformOrigin = 'left bottom'; }
+    const tb = this.root.current.querySelector('[data-topbar]'), lg = tb && tb.querySelector('img');
+    const fl = nb && nb.querySelector('[data-nav]');
+    if (tb && lg && fl) {
+      if (this.logoPad == null && lg.complete && lg.naturalWidth) {
+        try {
+          const w = 200, h = Math.round(200 * lg.naturalHeight / lg.naturalWidth), cv = document.createElement('canvas'); cv.width = w; cv.height = h;
+          const cx = cv.getContext('2d'); cx.drawImage(lg, 0, 0, w, h); const d = cx.getImageData(0, 0, w, h).data; let a = w;
+          for (let y = 0; y < h; y++) for (let x = 0; x < a; x++) if (d[(y * w + x) * 4 + 3] > 40) { a = x; break; }
+          this.logoPad = a / w;
+        } catch (e) { this.logoPad = 0; }
+      }
+      const sc = BR(nb).width / nb.offsetWidth || 1;
+      const textX = BR(nb).left + 18 * sc;
+      tb.style.left = (textX - (this.logoPad || 0) * BR(lg).width).toFixed(1) + 'px';
+      if (this.logoPad == null) lg.addEventListener('load', () => this.measure(), { once: true });
+    }
+    const inner = this.stagebox.firstElementChild;
+    if (inner) inner.style.transform = '';
+    if (narrow) { this.stagebox.style.left = '0px'; this.stagebox.style.right = '0px'; }
+    else {
+      const G = Math.max(28, VW * 0.03);
+      const navR = nb ? BR(nb).right + 18 : 200;
+      const railL = BR(this.rail).left + 48;
+      this.stagebox.style.left = (navR + G) + 'px';
+      this.stagebox.style.right = (VW - railL + G) + 'px';
+      if (inner && this.objs.length) {
+        let L = Infinity, R = -Infinity;
+        this.objs.forEach(o => { const r = BR(o.el); const a = o.ab || [0, 1]; L = Math.min(L, r.left + r.width * a[0]); R = Math.max(R, r.left + r.width * a[1]); });
+        const mid = VW / 2;
+        const avail = 2 * Math.min(mid - navR - G, railL - G - mid);
+        const sc = Math.min(0.81, avail / (R - L));
+        const ib = BR(inner);
+        const icx = ib.left + ib.width / 2;
+        const uc = icx + ((L + R) / 2 - icx) * sc;
+        const dx = mid - uc;
+        inner.style.transformOrigin = 'center bottom';
+        inner.style.transform = `translateX(${dx.toFixed(1)}px) scale(${sc.toFixed(3)})`;
+      }
+    }
+    this.objs.forEach(o => {
+      const r = o.el.getBoundingClientRect();
+      o.cx = r.left + r.width / 2; o.cy = r.top + r.height / 2; o.r = Math.min(r.width, r.height) / 2;
+    });
+  }
+  frame(t) {
+    const dt = Math.min(0.05, t - this.last); this.last = t;
+    const k = this.props.intensity ?? 1;
+    const m = this.m, rm = this.rm;
+    m.x += (m.tx - m.x) * 0.06; m.y += (m.ty - m.y) * 0.06;
+    const el = t - this.t0;
+    for (const o of this.objs) {
+      const p = rm ? 1 : Math.min(1, Math.max(0, (el - o.delay) / 1.1));
+      const e = 1 - Math.pow(1 - p, 3);
+      const fl = rm ? 0 : Math.sin(t * 0.7 + o.ph) * 7 * o.d * k;
+      const dx = o.cx - m.px, dy = o.cy - m.py, dist = Math.hypot(dx, dy) || 1;
+      const f = Math.max(0, 1 - dist / (o.r + 160)) * (rm ? 0 : 1);
+      o.pxv += ((dx / dist) * f * 22 * o.d * k - o.pxv) * 0.08;
+      o.pyv += ((dy / dist) * f * 22 * o.d * k - o.pyv) * 0.08;
+      const X = -m.x * o.d * 34 * k + o.pxv;
+      const Y = -m.y * o.d * 22 * k + fl + o.pyv + (1 - e) * 90 * (0.5 + o.d);
+      const wob = rm ? 0 : Math.sin(t * 0.5 + o.ph * 1.3);
+      const dw = (0.75 + o.d * 0.85) * (+o.el.dataset.tw || 1);
+      const ry = (m.x * 16 * dw + wob * 3 * dw + f * (dx / dist) * -10 * dw) * k, rx = (-m.y * 12 * dw + (rm ? 0 : Math.cos(t * 0.45 + o.ph)) * 2 * dw + f * (dy / dist) * 8 * dw) * k;
+      o.el.style.opacity = e;
+      o.body.style.transform = `translate3d(${X.toFixed(2)}px,${Y.toFixed(2)}px,0) rotateY(${ry.toFixed(2)}deg) rotateX(${rx.toFixed(2)}deg) scale(${(0.9 + 0.1 * e).toFixed(4)})`;
+      const th = (5 + o.d * 7) * k;
+      o.edge.style.transform = `translateZ(${(-th).toFixed(2)}px)`;
+      if (o.layers) for (const L of o.layers) L.el.style.transform = `translateZ(${(-th * L.f).toFixed(2)}px)`;
+      const lift = 18 + o.d * 26 + (1 - e) * 40;
+      o.shadow.style.transform = `translate(${(X * 0.35 - m.x * 16 * o.d * k + lift * 0.7).toFixed(2)}px,${(Y * 0.25 + lift).toFixed(2)}px) scale(${(0.96 - (1 - e) * 0.1).toFixed(3)})`;
+      if (o.contact) o.contact.style.transform = `translate(${(X * 0.85 + lift * 0.22).toFixed(2)}px,${(Y * 0.85 + lift * 0.3).toFixed(2)}px)`;
+    }
+    const h = this.hNav;
+    const nIntro = rm ? 1 : Math.min(1, Math.max(0, (el - 0.5) / 0.6));
+    this.navs.forEach((n, i) => {
+      const d = Math.abs(i - h);
+      const tx = (i === h ? 6 : 0) + n.ix * nIntro + (1 - nIntro) * -24;
+      const ty = 0;
+      const tr = n.base;
+      n.vx = (n.vx + (tx - n.x) * 0.14) * 0.72; n.x += n.vx;
+      n.vy = (n.vy + (ty - n.y) * 0.14) * 0.72; n.y += n.vy;
+      n.vr = (n.vr + (tr - n.r) * 0.14) * 0.72; n.r += n.vr;
+      let tRy = 0, tRx = 0;
+      if (false) {
+        const r = n.el.getBoundingClientRect();
+        tRy = ((m.px - (r.left + r.width / 2)) / r.width) * 8;
+        tRx = -((m.py - (r.top + r.height / 2)) / r.height) * 9;
+      }
+      n.ry = (n.ry || 0) + (tRy - (n.ry || 0)) * 0.14; n.rx = (n.rx || 0) + (tRx - (n.rx || 0)) * 0.14;
+      n.el.style.transform = `perspective(600px) translate(${n.x.toFixed(2)}px,${n.y.toFixed(2)}px) rotate(${n.r.toFixed(2)}deg) rotateY(${n.ry.toFixed(2)}deg) rotateX(${n.rx.toFixed(2)}deg)`;
+      n.el.style.opacity = Math.min(1, nIntro * 1.5);
+    });
+    if (this.rail.style.display !== 'none') {
+      const drift = (this.props.railDrift ?? true) && !rm && !this.overRail ? 20 : 0;
+      this.vel *= 0.9;
+      this.scroll += drift * dt + this.vel * dt;
+      const cs = this.cards, hn = cs.length >> 2;
+      const half = hn > 0 ? cs[hn].el.offsetTop - cs[0].el.offsetTop : this.track.scrollHeight / 2;
+      if (half > 0) { this.scroll = ((this.scroll % half) + half) % half; }
+      this.track.style.transform = `translate3d(0,${(-this.scroll).toFixed(2)}px,0)`;
+      const vh = innerHeight;
+      for (const c of this.cards) {
+        const hov = this.hCard === c.el;
+        c.c += ((hov ? 1 : 0) - c.c) * 0.14;
+        const r = c.el.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > vh + 100) continue;
+        const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+        const cyn = (cy / vh) * 2 - 1;
+        const bRy = -6, bRx = -cyn * 6 * k;
+        if (hov) { c.hy = ((m.px - cx) / r.width) * 18; c.hx = -((m.py - cy) / r.height) * 14; }
+        const ry = bRy + ((c.hy ?? bRy) - bRy) * c.c, rx = bRx + ((c.hx ?? bRx) - bRx) * c.c, z = 46 * c.c;
+        c.tilt.style.transform = `translateZ(${z.toFixed(2)}px) rotateY(${ry.toFixed(2)}deg) rotateX(${rx.toFixed(2)}deg)`;
+        c.cap.style.opacity = c.c.toFixed(3);
+        c.cap.style.transform = `translateZ(${(36 + c.c * 14).toFixed(1)}px) translateY(${((1 - c.c) * 8).toFixed(1)}px)`;
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* Layout shells. Mobile is the baseline; the wide rules only add room.
+   No bottom tab bar, no floating action button, no safe-area insets: production has none of the
+   three, and they are what made this read as a phone app instead of a responsive site. */
+.page{padding-inline:var(--gutter);padding-bottom:var(--space-8)}
+.card{background:var(--bg-card);border:var(--card-border);box-shadow:var(--card-lift);border-radius:var(--corner-card)}
+.tappable{min-height:var(--tap-min);min-width:var(--tap-min)}
+.press{transition:transform .18s var(--ease-stage)}
+.press:active{transform:scale(.97)}          /* press, not hover: no colour change on touch */
+.appbar{position:sticky;top:0;z-index:20;height:var(--header-h);
+padding-inline:var(--gutter);display:flex;align-items:center;gap:var(--space-3);
+background:color-mix(in srgb,var(--bg-page) 86%,transparent);backdrop-filter:blur(12px);
+border-bottom:1px solid var(--border-hairline)}
+/* Rails bleed past the gutter so the next card peeks in and tells you it scrolls. */
+.rail{display:flex;gap:var(--space-3);overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;
+padding-inline:var(--gutter);margin-inline:calc(var(--gutter) * -1);scroll-padding-left:var(--gutter)}
+.rail::-webkit-scrollbar{display:none}
+.rail>*{scroll-snap-align:start;flex:0 0 auto}
+/* One presentation at every width: a centred modal on the native <dialog> element.
+   ADR 0006, amendment 2026-08-18 retired the mobile sheet — the top layer's inset:0 box tracks
+   the layout viewport whose bottom edge hides behind dynamic toolbars, dvh lags there, and iOS
+   pans the visual viewport past its own bottom edge to chase the caret. The centred modal serves
+   every width, so there is no grabber, no touch physics and no 1024 switch. */
+.modal{width:min(560px,calc(100% - var(--gutter) * 2));max-width:none;max-height:var(--modal-max);
+padding:0;border:0;background:var(--bg-card);border-radius:var(--corner-card);color:var(--text-primary);
+box-shadow:var(--elevation-screen);overflow:hidden}
+.modal::backdrop{background:var(--scrim-modal)}
+.modal>.panel{display:flex;flex-direction:column;min-height:0;max-height:100%;padding:var(--space-5) 0}
+.media-scrim::after{content:"";position:absolute;inset:0;background:var(--scrim);pointer-events:none}
+[data-surface="stage"] .grain{position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:soft-light;
+background-image:var(--noise);background-size:180px 180px}
+@media (min-width:1024px){
+.page{max-width:var(--wrap-max);margin-inline:auto}
+.rail{margin-inline:0;padding-inline:0}
+}
+/* 3D and ambient motion are desktop-only: width, a real pointer, and no reduced-motion ask. */
+.enhanced-3d{display:none}
+@media (min-width:1024px) and (hover:hover) and (pointer:fine){
+@media (prefers-reduced-motion:no-preference){.enhanced-3d{display:block}}
+}

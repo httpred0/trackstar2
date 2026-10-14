@@ -1,0 +1,32 @@
+/* The client ramp, with their names, at production's weights: the Adobe project maps Light,
+   Medium, Demi Bold and Bold to 300, 400, 500 and 600. Sizes, leading and -0.02em tracking are
+   production's too. Only Title and Supertitle move on wide screens, because 17px body is
+   correct on a laptop as well. */
+.ts-caption{font-family:var(--font-ui);font-size:12px;line-height:16px;letter-spacing:-.02em;font-weight:400}
+.ts-caption-bold{font-family:var(--font-ui);font-size:12px;line-height:16px;letter-spacing:-.02em;font-weight:500}
+.ts-footnote{font-family:var(--font-ui);font-size:13px;line-height:18px;letter-spacing:-.02em;font-weight:400}
+.ts-subheadline{font-family:var(--font-ui);font-size:15px;line-height:20px;letter-spacing:-.02em;font-weight:400}
+.ts-subheadline-bold{font-family:var(--font-ui);font-size:15px;line-height:20px;letter-spacing:-.02em;font-weight:500}
+.ts-body{font-family:var(--font-ui);font-size:17px;line-height:22px;letter-spacing:-.02em;font-weight:300}
+.ts-body-bold{font-family:var(--font-ui);font-size:17px;line-height:22px;letter-spacing:-.02em;font-weight:500}
+.ts-title{font-family:var(--font-ui);font-size:22px;line-height:28px;letter-spacing:-.02em;font-weight:500}
+.ts-supertitle{font-family:var(--font-ui);font-size:28px;line-height:34px;letter-spacing:-.02em;font-weight:600}
+@media (min-width:1024px){
+.ts-title{font-size:26px;line-height:32px}
+.ts-supertitle{font-size:clamp(28px,4vw,44px);line-height:1.05}
+}
+/* Scores and the word Certified — the one job Newsreader italic keeps. */
+.ts-score-large{font-family:var(--font-score);font-style:italic;font-weight:400;font-size:60px;line-height:1;color:var(--accent-score)}
+.ts-score-inline{font-family:var(--font-score);font-style:italic;font-weight:400;font-size:28px;line-height:1;color:var(--accent-score)}
+.ts-score-small{font-family:var(--font-score);font-style:italic;font-weight:400;font-size:17px;line-height:1;color:var(--accent-score)}
+/* Eyebrow / chyron kicker. */
+.ts-eyebrow{font-family:var(--font-ui);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+.ts-label-chyron{font-family:var(--font-ui);font-weight:600;font-size:11px;line-height:1.2;letter-spacing:.17em;text-transform:uppercase}
+/* 1.01 editorial ramp — kept for the dark web surfaces built against it. */
+.ts-display-hero{font-family:var(--font-ui);font-weight:600;font-size:clamp(40px,9vw,88px);line-height:.92;letter-spacing:-.03em}
+.ts-display-section{font-family:var(--font-ui);font-weight:600;font-size:clamp(26px,5vw,46px);line-height:.98;letter-spacing:-.025em}
+.ts-display-card{font-family:var(--font-ui);font-weight:500;font-size:22px;line-height:1.15;letter-spacing:-.02em}
+.ts-body-large{font-family:var(--font-ui);font-weight:300;font-size:19px;line-height:1.4}
+.ts-body-default{font-family:var(--font-ui);font-weight:300;font-size:15px;line-height:1.5}
+.ts-body-small{font-family:var(--font-ui);font-weight:400;font-size:13px;line-height:1.45}
+.ts-prose-review{font-family:var(--font-ui);font-weight:300;font-size:17px;line-height:22px;letter-spacing:-.02em}

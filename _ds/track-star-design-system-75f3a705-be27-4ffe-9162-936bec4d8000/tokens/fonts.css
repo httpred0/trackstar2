@@ -1,0 +1,38 @@
+/* Type is two families and nothing else — and **no network in this file**.
+
+   Paralucent is served the way production serves it: there is no @font-face anywhere in
+   trackstar-v1 and no .woff2 binaries. The family comes from the client-owned Adobe Fonts
+   (Typekit) project, loaded from the page <head>. Asserted by
+   tests/test_global_chrome.py::test_paralucent_uses_the_client_owned_adobe_web_project (SOF-340),
+   which also asserts the old project (ueh3qpa.css) must NOT be used.
+
+   An @import here would put the whole token chain behind a third-party request: @import is
+   render-blocking, so an unreachable Adobe or Google would stop the page painting at all. Both
+   font stylesheets are therefore loaded as preloads that become stylesheets once they land —
+   production's words: "The link is a preload that becomes a stylesheet once it lands, so a slow
+   or unreachable Adobe never holds the first paint." Required markup for consumers, in <head>,
+   before styles.css:
+
+     <link rel="preconnect" href="https://use.typekit.net">
+     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+     <link rel="preload" as="style" href="https://use.typekit.net/yto0mgb.css"
+           onload="this.onload=null;this.rel='stylesheet'">
+     <noscript><link rel="stylesheet" href="https://use.typekit.net/yto0mgb.css"></noscript>
+
+   …and the same four for Newsreader from fonts.googleapis.com. Link only styles.css and you get
+   the fallback stack with the full layout: the type is a progressive enhancement, never a gate
+   on the first paint.
+
+   The Adobe project maps Paralucent Light, Medium, Demi Bold and Bold to CSS 300, 400, 500
+   and 600. Those four numbers are the only weights this system names.
+
+   Newsreader italic is ours and keeps one job: score numerals and the word Certified. */
+:root{
+--font-ui:"paralucent",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+--font-score:"Newsreader",Georgia,serif;
+/* The two weights a rule may name outside the type roles. Emphasis is Demi Bold, the face every
+   bold role and inline strong takes; display is Bold, for large numerals and hero titles only. */
+--weight-emphasis:500;--weight-display:600;
+/* 1.01 aliases — components written against these keep working */
+--font-display:var(--font-ui);--font-prose:var(--font-ui);
+}

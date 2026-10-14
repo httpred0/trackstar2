@@ -1,0 +1,107 @@
+/* Palette comes from the client Figma and light is the base.
+   Primitives are values only — never reference them from a component. */
+:root{
+/* light primitives */
+--tan-100:#FFF4E9;              /* Track Star Tan — the page */
+--tan-200:#F6E9DB;              /* wells and insets, derived */
+--white:#FFFFFF;                /* cards */
+--ink-primary:#0C0C0C;          /* Primary */
+--ink-010:rgba(12,12,12,.10);   /* Border */
+--ink-005:rgba(12,12,12,.05);   /* Shading */
+--ink-026:rgba(12,12,12,.26);
+--orange-500:#FF5B00;           /* Track Star Orange */
+--orange-600:#E85200;           /* hover on light, derived */
+--orange-700:#D94D00;           /* pressed, derived */
+--orange-400:#FF7A3D;           /* hover on dark, derived */
+--orange-score:#E04F00;         /* one step down: holds contrast on tan at 12px */
+--orange-050:#FFF0E6;           /* selected-row wash */
+--green-600:#1E7A4B;
+/* dark primitives — 1.01's palette, kept intact as the dark peer */
+--ink-900:#050506;--ink-800:#0A0809;--ink-700:#151113;--ink-600:#1D171A;
+--paper-100:#EDE7DF;--paper-400:#9A938C;--paper-500:#8C857F;
+}
+
+/* ---- semantic layer: the only thing a component may read ---- */
+:root{
+--bg-page:var(--tan-100);--bg-well:var(--tan-200);--bg-card:var(--white);
+--bg-shade:var(--ink-005);--bg-selected:var(--orange-050);
+--text-primary:var(--ink-primary);
+--text-secondary:#6F6F6F;       /* 4.6:1 on tan — one step past the handoff's #7A7A7A, which measures 3.96:1 */
+--text-muted:#7A7A7A;           /* the handoff value, held to 15px+ labels and eyebrows */
+--text-on-accent:var(--white);
+--accent-default:var(--orange-500);--accent-hover:var(--orange-600);--accent-pressed:var(--orange-700);
+--accent-score:var(--orange-score);
+--status-guessed:var(--green-600);--status-missed:var(--accent-default);
+/* Form validation. --status-bad is production's --danger, verbatim (#d3282d light / #ff5a5f dark);
+   --status-ok reuses the green primitive we already hold, lightened in dark by derivation rather
+   than by eye. Neither is the game readout: --status-guessed stays the on-air scoreboard. */
+--status-ok:var(--green-600);--status-bad:#D3282D;
+--border-hairline:var(--ink-010);--border-strong:var(--ink-026);
+--bg-on-media:rgba(5,5,6,.78);--text-on-media:#EDE7DF;   /* chrome over stills and artwork */
+--scrim-modal:rgba(12,12,12,.42);                        /* the modal backdrop — the one scrim that exists in both themes */
+/* 1.01 aliases, so the dark-editorial components are theme-aware for free */
+--bg-stage:var(--bg-page);--bg-surface:var(--bg-card);--bg-raised:var(--bg-shade);
+--border-subtle:var(--border-hairline);
+}
+
+/* dark follows the device unless a person has said otherwise */
+@media (prefers-color-scheme:dark){
+:root{
+--bg-page:var(--ink-900);--bg-well:var(--ink-800);--bg-card:var(--ink-700);
+--bg-shade:var(--ink-600);--bg-selected:rgba(255,91,0,.16);
+--text-primary:var(--paper-100);--text-secondary:var(--paper-400);--text-muted:var(--paper-500);
+--text-on-accent:var(--white);
+--accent-hover:var(--orange-400);--accent-score:var(--orange-500);
+--border-hairline:rgba(237,231,223,.13);--border-strong:rgba(237,231,223,.36);
+--scrim-modal:rgba(5,5,6,.62);
+--status-ok:color-mix(in srgb,var(--green-600) 52%,var(--paper-100));--status-bad:#FF5A5F;
+}
+}
+/* explicit override */
+[data-theme="dark"]{
+--bg-page:var(--ink-900);--bg-well:var(--ink-800);--bg-card:var(--ink-700);
+--bg-shade:var(--ink-600);--bg-selected:rgba(255,91,0,.16);
+--text-primary:var(--paper-100);--text-secondary:var(--paper-400);--text-muted:var(--paper-500);
+--text-on-accent:var(--white);
+--accent-hover:var(--orange-400);--accent-score:var(--orange-500);
+--border-hairline:rgba(237,231,223,.13);--border-strong:rgba(237,231,223,.36);
+--scrim-modal:rgba(5,5,6,.62);
+--status-ok:color-mix(in srgb,var(--green-600) 52%,var(--paper-100));--status-bad:#FF5A5F;
+}
+
+/* The stage stays dark in both themes: the episode player, the episode hero, the cinema
+   overlay. Put data-surface="stage" on that subtree — it sits on a descendant, so these
+   declarations beat whatever the theme inherited in, with no per-theme selector needed. */
+[data-surface="stage"]{
+--bg-page:var(--ink-900);--bg-well:var(--ink-800);--bg-card:var(--ink-700);
+--bg-shade:var(--ink-600);--bg-selected:rgba(255,91,0,.16);
+--text-primary:var(--paper-100);--text-secondary:var(--paper-400);--text-muted:var(--paper-500);
+--text-on-accent:var(--white);
+--accent-hover:var(--orange-400);--accent-score:var(--orange-500);
+--border-hairline:rgba(237,231,223,.13);--border-strong:rgba(237,231,223,.36);
+--bg-stage:var(--bg-page);--bg-surface:var(--bg-card);--bg-raised:var(--bg-shade);
+--border-subtle:var(--border-hairline);
+--status-ok:color-mix(in srgb,var(--green-600) 52%,var(--paper-100));--status-bad:#FF5A5F;
+--card-border:1px solid rgba(237,231,223,.10); /* @kind other */
+--card-lift:0 14px 30px rgba(0,0,0,.5); /* @kind shadow */
+--elevation-card:0 14px 30px rgba(0,0,0,.5);
+--elevation-on-air:0 0 80px rgba(255,91,0,.34);
+--scrim:linear-gradient(to top,rgba(5,5,6,.92),rgba(5,5,6,.15) 60%,transparent); /* @kind other */
+background:var(--bg-page);color:var(--text-primary);
+}
+/* light is forceable anywhere, not just at the root — a themed subtree has to be able to
+   re-declare the whole semantic layer, otherwise the inherited theme leaks into it. */
+[data-theme="light"]{
+--bg-page:var(--tan-100);--bg-well:var(--tan-200);--bg-card:var(--white);
+--bg-shade:var(--ink-005);--bg-selected:var(--orange-050);
+--text-primary:var(--ink-primary);--text-secondary:#6F6F6F;--text-muted:#7A7A7A;
+--text-on-accent:var(--white);
+--accent-hover:var(--orange-600);--accent-score:var(--orange-score);
+--border-hairline:var(--ink-010);--border-strong:var(--ink-026);--scrim-modal:rgba(12,12,12,.42);
+--status-ok:var(--green-600);--status-bad:#D3282D;
+--bg-stage:var(--bg-page);--bg-surface:var(--bg-card);--bg-raised:var(--bg-shade);
+--border-subtle:var(--border-hairline);
+}
+:root,[data-theme]{color-scheme:light dark}
+[data-theme="light"]{color-scheme:light}
+[data-theme="dark"]{color-scheme:dark}

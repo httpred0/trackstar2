@@ -1,0 +1,10 @@
+/* Track Star — Design System 1.02. Entry point: consumers link this one file.
+   Light is the base, dark is a peer, the stage stays dark in both. Mobile 390 first. */
+@import url('./tokens/fonts.css');
+@import url('./tokens/colors.css');
+@import url('./tokens/spacing.css');
+@import url('./tokens/typography.css');
+@import url('./tokens/elevation.css');
+@import url('./tokens/motion.css');
+@import url('./tokens/layout.css');
+@import url('./tokens/base.css');

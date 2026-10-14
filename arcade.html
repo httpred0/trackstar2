@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<meta name="ext-resource-dependency" content="./assets/export/plx-1-sky.webp" data-resource-id="r_plx_1_sky_png" />
+<meta name="ext-resource-dependency" content="./assets/export/plx-2-distant.webp" data-resource-id="r_plx_2_distant_png" />
+<meta name="ext-resource-dependency" content="./assets/export/plx-3-mid.webp" data-resource-id="r_plx_3_mid_png" />
+<meta name="ext-resource-dependency" content="./assets/export/plx-4-fore.webp" data-resource-id="r_plx_4_fore_png" />
+<meta name="ext-resource-dependency" content="./assets/logo-trackstar-orange.svg" data-resource-id="r_logo_trackstar_orange_svg" />
+<meta name="ext-resource-dependency" content="./assets/export/avatar-me.webp" data-resource-id="r_avatar_me_png" />
+<meta name="ext-resource-dependency" content="./assets/export/arcade-hero-2.webp" data-resource-id="r_arcade_hero_2_png" />
+<meta name="ext-resource-dependency" content="./assets/export/game-daily-track.webp" data-resource-id="r_game_daily_track_png" />
+<meta name="ext-resource-dependency" content="./assets/export/game-album-battles.webp" data-resource-id="r_game_album_battles_png" />
+<meta name="ext-resource-dependency" content="./assets/export/game-music-twin.webp" data-resource-id="r_game_music_twin_png" />
+<meta name="ext-resource-dependency" content="./assets/export/game-mystery-track.webp" data-resource-id="r_game_mystery_track_png" />
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://use.typekit.net" crossorigin="">
+<link rel="stylesheet" href="https://use.typekit.net/yto0mgb.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&amp;display=swap">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/colors.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/typography.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/motion.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/layout.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/tokens/base.css">
+<link rel="stylesheet" href="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/styles.css">
+<script src="_ds/track-star-design-system-75f3a705-be27-4ffe-9162-936bec4d8000/_ds_bundle.js"></script>
+<style>html,body{margin:0;min-height:100%;background:#F5E8D6}html{overflow-x:clip}a{color:var(--text-primary);text-decoration:none}a:hover{color:var(--accent-default)}button{font:inherit}@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}@keyframes ts-spin{to{transform:rotate(360deg)}}@keyframes ts-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}</style>
+</helmet>
+<div ref="{{ root }}" data-theme="{{ theme }}" style="position:relative; min-height:100svh; background:{{ pageBg }}; color:{{ ink }}; font-family:var(--font-ui); letter-spacing:-.02em; transition:background .7s var(--ease-stage), color .5s;">
+  <sc-if value="{{ stage }}" hint-placeholder-val="{{ false }}">
+    <div data-plxbox="1" aria-hidden="true" style="position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; background:#F5E8D6;">
+      <div data-plx="0" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_1_sky_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div data-plx="1" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_2_distant_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div data-plx="2" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_3_mid_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div data-plx="3" style="position:absolute; left:-48px; right:-48px; top:-30px; bottom:-30px; background:url({{ R.r_plx_4_fore_png }}) center bottom / cover no-repeat; will-change:transform;"></div>
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(247,237,223,.78) 0%, rgba(247,237,223,.6) 28%, rgba(247,237,223,.12) 50%, rgba(247,237,223,0) 70%);"></div>
+    </div>
+  </sc-if>
+
+  <div data-theme="{{ chromeTheme }}" style="position:relative; z-index:40; color:var(--text-primary);">
+  
+
+  <div aria-hidden="true" style="position:fixed; top:0; left:0; right:0; height:{{ barGlass.h }}; z-index:29; pointer-events:none; background:{{ barGlass.bg }}; -webkit-backdrop-filter:blur(20px) saturate(1.5); backdrop-filter:blur(20px) saturate(1.5); box-shadow:{{ barGlass.shadow }}; opacity:{{ barGlass.o }}; transition:opacity .35s var(--ease-stage), height .35s var(--ease-stage);"></div>
+  <header data-topbar="1" style="transition:top .35s var(--ease-stage); position:fixed; top:{{ barGlass.top }}; left:clamp(20px,3vw,50px); right:clamp(24px,3vw,56px); z-index:30; height:56px; display:flex; align-items:center; justify-content:space-between; pointer-events:none;">
+  <div style="pointer-events:auto; display:flex;">
+<a href="/" aria-label="Track Star home" style="display:flex; align-items:center;">
+    <img src="assets/logo-trackstar-orange.svg" alt="Track Star" style="height:{{ barGlass.logo }}; width:auto; display:block; transition:height .35s var(--ease-stage);">
+  </a>
+  <span aria-hidden="true" style="align-self:center; width:1px; height:24px; margin:0 16px 0 14px; background:var(--border-hairline);"></span>
+  <div style="align-self:center; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:2px;">
+    <button type="button" onClick="{{ goHub }}" style="align-self:flex-start; min-height:0; text-align:left; line-height:16px; padding:0; border:0; background:transparent; cursor:pointer; font-size:12px; font-weight:400; letter-spacing:.17em; text-transform:uppercase; color:var(--text-primary); white-space:nowrap;" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;">The Arcade</button>
+    <sc-if value="{{ inGame }}" hint-placeholder-val="{{ false }}"><span style="font-size:10.5px; line-height:14px; font-weight:300; letter-spacing:.17em; text-transform:uppercase; color:var(--text-secondary); white-space:nowrap;">Same Energy</span></sc-if>
+  </div>
+  </div>
+  <div style="pointer-events:auto; display:flex;">
+<div data-profile="1" style="position:relative; display:flex; align-items:center; gap:6px;">
+      
+      <button type="button" aria-label="Notifications" style="position:relative; width:44px; height:44px; border:0; padding:0; border-radius:50%; display:grid; place-items:center; background:transparent; color:var(--text-primary); cursor:pointer;" style-hover="background:rgba(60,35,15,.07);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+        <span style="position:absolute; top:10px; right:11px; width:8px; height:8px; border-radius:50%; background:var(--accent-default); box-shadow:0 0 0 2px {{ glass.dotRing }};"></span>
+      </button>
+      <div style="position:relative; display:flex;">
+        <button type="button" onClick="{{ toggleMenu }}" aria-label="Your profile" aria-haspopup="menu" aria-expanded="{{ menuOpen }}" style="display:flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; border:0; padding:0; border-radius:50%; background:transparent; cursor:pointer;">
+          <x-import component-from-global-scope="TrackStarDesignSystem_75f3a7.Avatar" name="Pedro" src="{{ R.r_avatar_me_png }}" size="{{ avatarSize }}" hint-size="36px,36px"></x-import>
+        </button>
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <div role="menu" style="position:absolute; top:calc(100% + 12px); right:-6px; width:240px; padding:6px; display:flex; flex-direction:column; gap:2px; background:{{ glass.menu }}; -webkit-backdrop-filter:blur(22px) saturate(1.5); backdrop-filter:blur(22px) saturate(1.5); color:var(--text-primary); border:0; border-radius:var(--corner-card); box-shadow:{{ glass.menuShadow }};">
+          <span style="padding:10px 14px 6px; font-size:12px; font-weight:500; color:var(--text-muted);">@johncena</span>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"></path></svg></span><span>Profile</span></a>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg></span><span>My ratings</span></a>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11"></path><path d="M9 12h11"></path><path d="M9 18h11"></path><path d="M4 6h.01"></path><path d="M4 12h.01"></path><path d="M4 18h.01"></path></svg></span><span>My lists</span></a>
+          <span style="height:1px; margin:6px 8px; background:var(--border-hairline);"></span>
+          <div style="display:flex; flex-direction:column; gap:8px; padding:6px;">
+            <span style="padding:0 8px; font-size:12px; font-weight:500; color:var(--text-muted);">Theme</span>
+            <div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:2px; padding:3px; border-radius:12px; background:rgba(60,35,15,.07);">
+              <sc-for list="{{ themeOpts }}" as="th" hint-placeholder-count="2">
+                <button type="button" onClick="{{ th.pick }}" style="min-height:36px; border:0; border-radius:9px; font:inherit; font-size:13px; font-weight:500; cursor:pointer; background:{{ th.bg }}; color:{{ th.color }}; box-shadow:{{ th.shadow }}; transition:background .25s var(--ease-stage), color .25s var(--ease-stage), box-shadow .25s var(--ease-stage);">{{ th.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <span style="height:1px; margin:6px 8px; background:var(--border-hairline);"></span>
+          <a href="#" role="menuitem" style="display:flex; align-items:center; gap:12px; min-height:44px; padding:0 14px 0 12px; border-radius:10px; font-size:15px; font-weight:500; color:var(--text-secondary);" style-hover="background:var(--bg-shade); color:var(--text-primary);"><span style="width:24px; height:24px; display:grid; place-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"></path><path d="M10 16l-4-4 4-4"></path><path d="M6 12h10"></path></svg></span><span>Sign out</span></a>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+  <div data-glass="1" style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:clamp(260px,30vw,460px); pointer-events:auto; padding:3px; border-radius:999px; background:{{ glass.bg }}; -webkit-backdrop-filter:blur(18px) saturate(1.5); backdrop-filter:blur(18px) saturate(1.5); box-shadow:{{ glass.shadow }};">
+    <x-import component-from-global-scope="TrackStarDesignSystem_75f3a7.SearchBar" placeholder="Search songs, episodes, people" style="width:100%; background:transparent; border:0; box-shadow:none;" hint-size="100%,44px"></x-import>
+  </div>
+  </header>
+  </div>
+
+  <main style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:120px clamp(20px,4vw,56px) 120px; opacity:{{ fade.o }}; transform:{{ fade.t }}; transition:opacity .45s var(--ease-stage), transform .6s var(--ease-stage);">
+
+    <sc-if value="{{ isHub }}" hint-placeholder-val="{{ true }}">
+      <section data-screen-label="Arcade hub" style="display:flex; flex-direction:column; gap:clamp(36px,4vw,52px);">
+        <div style="position:relative; width:100vw; margin:-120px 0 0 calc(50% - 50vw); height:clamp(600px,50vw,780px); background-color:#F3E3CC; background-image:linear-gradient(90deg, rgba(245,232,214,.45) 0, rgba(245,232,214,0) 520px), url({{ R.r_arcade_hero_2_png }}); background-repeat:no-repeat; background-size:100% 100%, max(100vw, 1300px) auto; background-position:0 0, left bottom; display:flex; align-items:center;">
+          <div style="position:relative; flex:1 1 0; min-width:0; max-width:1200px; margin:0 auto; padding:120px clamp(20px,4vw,56px) 56px; box-sizing:content-box;">
+            <div style="display:flex; flex-direction:column; align-items:flex-start; gap:22px; max-width:min(440px, 42vw);">
+                            <h1 style="margin:0; font-size:clamp(64px,7vw,108px); line-height:.84; font-weight:600; letter-spacing:-.055em; color:#0C0C0C;">Same<br>Energy</h1>
+              <p style="margin:0; font-size:18px; line-height:25px; font-weight:300; color:#3A322C; text-wrap:pretty;">Find the emotional connection between completely different songs. Listen, trust your instincts, and discover who shares your wavelength.</p>
+              <button type="button" onClick="{{ openGame }}" style="display:inline-flex; align-items:center; gap:12px; min-height:48px; margin-top:4px; padding:0 26px; border:0; border-radius:999px; background:var(--accent-default); color:#FFF; font-size:16px; font-weight:500; cursor:pointer; box-shadow:0 1px 1px rgba(60,35,15,.10), 0 14px 24px -12px rgba(60,35,15,.5); transition:background .2s var(--ease-stage);" style-hover="background:var(--accent-hover);" style-active="transform:scale(.97);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;">Play now</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap;">
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <h2 style="margin:0; font-size:clamp(40px,4.4vw,60px); line-height:.95; font-weight:600; letter-spacing:-.05em;">More ways to play</h2>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap:clamp(16px,2vw,24px);">
+            <sc-for list="{{ soon }}" as="g" hint-placeholder-count="4">
+              <article aria-label="{{ g.title }}, coming soon" style="display:flex; flex-direction:column; gap:14px;">
+                <div style="position:relative; aspect-ratio:1.48; border-radius:4px; overflow:hidden; background:{{ g.bg }}; color:{{ g.fg }}; box-shadow:0 1px 2px rgba(60,35,15,.14), 0 14px 26px -16px rgba(60,35,15,.4); transition:transform .5s var(--ease-stage), box-shadow .5s var(--ease-stage);" style-hover="transform:translateY(-3px); box-shadow:0 1px 2px rgba(60,35,15,.14), 0 22px 34px -18px rgba(60,35,15,.5);">
+                  <img data-art="{{ g.img }}" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+                </div>
+                <div style="display:flex; flex-direction:column; gap:4px;">
+                  <h3 style="margin:0; font-size:22px; line-height:28px; font-weight:500; letter-spacing:-.02em;">{{ g.title }}</h3>
+                  <p style="margin:0; font-size:17px; line-height:22px; font-weight:300; color:var(--text-secondary);">{{ g.tagline }}</p>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isIntro }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Same Energy intro" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap:56px; align-items:center; min-height:calc(100svh - 260px); animation:ts-rise .8s var(--ease-stage) both;">
+        <div style="display:flex; flex-direction:column; gap:26px;">
+          
+          <h1 style="position:relative; margin:0; font-size:clamp(72px,10vw,150px); line-height:.82; font-weight:600; letter-spacing:-.065em;">Same<br>Energy</h1>
+          <p style="margin:0; max-width:440px; font-size:17px; line-height:25px; font-weight:300; color:var(--text-secondary); text-wrap:pretty;">Hear a song. Pick the one of three that shares its feeling — not its genre, not its era. Then see who heard it the same way.</p>
+          <ol style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; max-width:440px;">
+            <sc-for list="{{ roundsInfo }}" as="ri" hint-placeholder-count="3">
+              <li style="display:flex; align-items:baseline; gap:18px; padding:12px 0; border-bottom:{{ ri.line }};"><span style="font-size:15px; font-weight:500; font-variant-numeric:tabular-nums; color:var(--accent-default); width:20px;">{{ ri.n }}</span><span style="flex:1; font-size:16px; font-weight:500;">{{ ri.name }}</span><svg aria-hidden="true" width="46" height="20" viewBox="0 0 46 20" fill="none" stroke="var(--accent-default)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="align-self:center; flex:none;"><path d="{{ ri.wave }}"></path></svg></li>
+            </sc-for>
+          </ol>
+          <div style="align-self:flex-start; display:flex; flex-direction:column; align-items:center; gap:12px;"><button type="button" onClick="{{ startGame }}" style="display:inline-flex; align-items:center; gap:14px; min-height:56px; padding:0 28px; border:0; border-radius:999px; background:var(--accent-default); color:#FFF; cursor:pointer; font-size:17px; font-weight:500; transition:transform .3s var(--ease-stage), background .3s;" style-hover="background:var(--accent-hover); transform:translateY(-1px);" style-focus="outline:2px solid var(--text-primary); outline-offset:3px;">Play today's game</button><span style="font-size:13px; color:var(--text-secondary);">About 3 minutes · Headphones on</span></div>
+        </div>
+        <div aria-hidden="true" onMouseEnter="{{ hubHoverOn }}" onMouseLeave="{{ hubHoverOff }}" style="position:relative; width:100%; max-width:660px; aspect-ratio:1.15; justify-self:center;">
+          <sc-for list="{{ hubPair }}" as="p" hint-placeholder-count="2">
+            <div style="position:absolute; left:{{ p.left }}; top:{{ p.top }}; width:54%; aspect-ratio:1; z-index:{{ p.z }}; transform:{{ p.tf }}; transition:transform .9s var(--ease-stage);">
+              <div style="position:absolute; inset:4%; transform:{{ p.discTf }}; transition:transform .9s var(--ease-stage) {{ p.delay }};"><div style="width:100%; height:100%; border-radius:50%; background:repeating-radial-gradient(circle at 50% 50%, #111 0 1px, #1b1a1b 1px 3px), #141314; box-shadow:3px 5px 8px rgba(60,35,15,.28), 16px 26px 36px -10px rgba(60,35,15,.38); animation:ts-spin 2.4s linear infinite; animation-play-state:{{ p.spin }}; display:grid; place-items:center;"><div style="position:relative; width:36%; aspect-ratio:1; border-radius:50%; overflow:hidden; background:#EDE7DF; box-shadow:0 0 0 2px rgba(0,0,0,.35); display:grid; place-items:center;"><sc-if value="{{ p.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ p.art }}" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></sc-if><div style="position:relative; width:11%; aspect-ratio:1; border-radius:50%; background:#0B0A0B; box-shadow:0 0 0 2px rgba(255,255,255,.5);"></div></div></div></div>
+              <div style="position:relative; z-index:1; width:100%; height:100%; border-radius:3px; overflow:hidden; background:#2A2326; box-shadow:2px 4px 6px rgba(60,35,15,.24), 12px 22px 30px -6px rgba(60,35,15,.34), 28px 42px 56px -18px rgba(60,35,15,.26);"><sc-if value="{{ p.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ p.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if><div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,0) 40%); pointer-events:none;"></div></div>
+            </div>
+          </sc-for>
+          <div style="position:absolute; left:50%; top:52%; z-index:5; width:56px; height:56px; margin:-28px 0 0 -28px; border-radius:50%; background:var(--accent-default); color:#FFF; display:grid; place-items:center; font-size:26px; font-weight:500; box-shadow:2px 4px 6px rgba(60,35,15,.25), 10px 18px 26px -8px rgba(60,35,15,.35); opacity:{{ hubEq.o }}; transform:{{ hubEq.tf }}; transition:opacity .4s var(--ease-stage) .25s, transform .6s var(--ease-stage) .25s;">=</div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ showRoundBar }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex; flex-direction:column; justify-content:center; min-height:calc(100svh - 240px);">
+    <div data-screen-label="Game card" style="position:relative; width:100%; box-sizing:border-box; padding:clamp(14px,1.6vw,20px) clamp(20px,3vw,40px) clamp(20px,3vw,40px); border-radius:24px; background:linear-gradient(180deg, rgba(255,255,255,.52), rgba(255,255,255,.22)); -webkit-backdrop-filter:blur(22px) saturate(1.4); backdrop-filter:blur(22px) saturate(1.4); box-shadow:inset 0 1px 0 rgba(255,255,255,.85), inset 0 0 0 1px rgba(255,255,255,.45), 0 1px 2px rgba(60,35,15,.06), 0 30px 60px -30px rgba(60,35,15,.35);">
+    
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin:0 0 clamp(28px,4vw,44px); padding:0 0 clamp(14px,1.6vw,20px); border-bottom:1px solid rgba(60,35,15,.12);">
+        <div style="display:flex; align-items:center; gap:12px; min-height:40px;"><span style="font-size:15px; font-weight:500; color:var(--text-primary);">Round {{ rnd.n }} of 3</span><span aria-hidden="true" style="width:1px; height:16px; background:rgba(60,35,15,.18);"></span><span style="font-size:15px; font-weight:300; color:var(--text-secondary);">{{ rnd.name }}</span></div>
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div aria-hidden="true" style="display:flex; gap:4px;"><sc-for list="{{ pips }}" as="p" hint-placeholder-count="3"><span style="width:28px; height:4px; border-radius:4px; background:{{ p.bg }}; transition:background .5s var(--ease-stage);"></span></sc-for></div>
+          <span style="display:inline-flex; align-items:baseline; gap:4px; min-height:40px; align-items:center; padding:0 16px; border-radius:999px; background:#0C0C0C; color:#FFF4E9; font-size:15px; font-weight:500; font-variant-numeric:tabular-nums;">{{ scoreShown }}<span style="font-size:13px; font-weight:300; opacity:.75;">pts</span></span>
+        </div>
+      </div>
+    
+
+    <sc-if value="{{ isListen }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Listen" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:clamp(32px,4vw,72px); align-items:center; animation:ts-rise .7s var(--ease-stage) both;">
+        <div style="position:relative; width:70%; max-width:380px; margin-right:24%; justify-self:center; transform:translateX(2%);">
+          <div aria-hidden="true" style="position:absolute; top:4%; left:4%; width:92%; aspect-ratio:1; border-radius:50%; transform:translateX({{ ref.discX }}) rotate({{ ref.discR }}); transition:transform 1s var(--ease-stage);"><div style="width:100%; height:100%; border-radius:50%; background:repeating-radial-gradient(circle at 50% 50%, #111 0 1px, #1b1a1b 1px 3px), #141314; box-shadow:3px 5px 8px rgba(60,35,15,.28), 16px 26px 36px -10px rgba(60,35,15,.38); animation:ts-spin 2.4s linear infinite; animation-play-state:{{ ref.spin }}; display:grid; place-items:center;"><div style="position:relative; width:36%; aspect-ratio:1; border-radius:50%; overflow:hidden; background:var(--accent-default); box-shadow:0 0 0 2px rgba(0,0,0,.35); display:grid; place-items:center;"><sc-if value="{{ ref.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ ref.art }}" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></sc-if><div style="position:relative; width:11%; aspect-ratio:1; border-radius:50%; background:#0B0A0B; box-shadow:0 0 0 2px rgba(255,255,255,.5);"></div></div></div></div>
+          <div onClick="{{ ref.toggle }}" style="position:relative; z-index:1; width:100%; aspect-ratio:1; border-radius:3px; overflow:hidden; cursor:pointer; background:{{ ref.tint }}; transform:{{ ref.sleeveTf }}; transition:transform 1s var(--ease-stage); box-shadow:2px 4px 6px rgba(60,35,15,.24), 12px 22px 30px -6px rgba(60,35,15,.34), 28px 42px 56px -18px rgba(60,35,15,.26);"><sc-if value="{{ ref.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ ref.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if><div aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,0) 40%); pointer-events:none;"></div></div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:24px; max-width:500px; min-width:0;">
+          <span style="font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--text-secondary);">The reference</span>
+          <h2 style="margin:0; font-size:clamp(52px,7vw,96px); line-height:.86; font-weight:600; letter-spacing:-.055em;">Listen<br>closely.</h2>
+          <p style="margin:0; font-size:20px; line-height:26px; font-weight:300; letter-spacing:-.02em; color:var(--text-secondary);">Every song has a feeling. Find another one that shares it.</p>
+          <div style="display:flex; flex-direction:column; gap:14px; padding-top:20px; border-top:1px solid rgba(60,35,15,.12);">
+            <div style="display:flex; align-items:center; gap:18px;">
+              <button type="button" onClick="{{ ref.toggle }}" disabled="{{ ref.na }}" aria-label="{{ ref.btnLabel }}" style="flex:none; width:64px; height:64px; border:0; border-radius:50%; display:grid; place-items:center; background:#0C0C0C; color:#FFF4E9; cursor:pointer; transition:transform .3s var(--ease-stage);" style-hover="transform:scale(1.05);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;"><sc-if value="{{ ref.playing }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg></sc-if><sc-if value="{{ ref.paused }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg></sc-if></button>
+              <div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-size:24px; line-height:28px; font-weight:500;">{{ ref.title }}</span><span style="font-size:15px; line-height:20px; color:var(--text-secondary);">{{ ref.artist }}</span></div>
+            </div>
+            <div style="height:2px; border-radius:2px; background:rgba(60,35,15,.14); overflow:hidden;"><div style="height:100%; width:{{ ref.prog }}; background:var(--accent-default); transition:width .25s linear;"></div></div>
+            <span style="font-size:12px; color:var(--text-secondary); font-variant-numeric:tabular-nums;">{{ ref.status }}</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;"><button type="button" onClick="{{ toChoose }}" style="display:inline-flex; align-items:center; gap:14px; min-height:56px; padding:0 28px; border:0; border-radius:999px; background:var(--accent-default); color:#FFF; cursor:pointer; font-size:17px; font-weight:500; transition:transform .3s var(--ease-stage), background .3s;" style-hover="background:var(--accent-hover); transform:translateY(-1px);" style-focus="outline:2px solid var(--text-primary); outline-offset:3px;">Find the same energy</button></div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isChoose }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Choose" style="display:flex; flex-direction:column; gap:clamp(20px,2.4vw,28px); animation:ts-rise .7s var(--ease-stage) both;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+          <h2 style="margin:0; font-size:clamp(32px,3.6vw,48px); line-height:1; font-weight:600; letter-spacing:-.05em;">Which one <span style="font-weight:400; letter-spacing:-.03em;">feels the same?</span></h2>
+          <button type="button" onClick="{{ ref.toggle }}" disabled="{{ ref.na }}" style="display:flex; align-items:center; gap:14px; min-height:60px; padding:8px 20px 8px 8px; border:0; border-radius:999px; background:rgba(60,35,15,.06); box-shadow:inset 0 0 0 1px rgba(60,35,15,.1); color:var(--text-primary); cursor:pointer; text-align:left;" style-hover="background:rgba(60,35,15,.1);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;">
+            <span style="position:relative; width:44px; height:44px; border-radius:50%; overflow:hidden; background:{{ ref.tint }}; flex:none; animation:ts-spin 3s linear infinite; animation-play-state:{{ ref.spin }};"><sc-if value="{{ ref.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ ref.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if></span>
+            <span style="display:flex; flex-direction:column;"><span style="font-size:10.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--text-secondary);">{{ ref.miniLabel }}</span><span style="font-size:15px; font-weight:500;">{{ ref.title }} — {{ ref.artist }}</span></span>
+          </button>
+        </div>
+        <div role="radiogroup" aria-label="Candidate songs" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap:clamp(20px,2.4vw,36px);">
+          <sc-for list="{{ cands }}" as="c" hint-placeholder-count="3">
+            <div style="position:relative; display:flex; flex-direction:column; gap:14px; transform:{{ c.lift }}; transition:transform .6s var(--ease-stage);">
+              <button type="button" role="radio" aria-checked="{{ c.selected }}" aria-label="{{ c.selLabel }}" onClick="{{ c.select }}" style="position:absolute; inset:-8px; z-index:3; border:0; border-radius:8px; background:transparent; cursor:pointer;" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;"></button>
+              <div style="position:relative; width:72%; max-width:250px; margin:0 auto;">
+                <div aria-hidden="true" style="position:absolute; top:4%; left:4%; width:92%; aspect-ratio:1; border-radius:50%; transform:translateX({{ c.discX }}); transition:transform .9s var(--ease-stage);"><div style="width:100%; height:100%; border-radius:50%; background:repeating-radial-gradient(circle at 50% 50%, #111 0 1px, #1b1a1b 1px 3px), #141314; box-shadow:0 20px 40px -18px rgba(60,35,15,.38); animation:ts-spin 2.4s linear infinite; animation-play-state:{{ c.spin }}; display:grid; place-items:center;"><div style="width:34%; aspect-ratio:1; border-radius:50%; background:var(--accent-default); box-shadow:inset 0 0 0 6px rgba(0,0,0,.12); display:grid; place-items:center;"><div style="width:10%; aspect-ratio:1; border-radius:50%; background:#0B0A0B;"></div></div></div></div>
+                <div style="position:relative; z-index:1; border-radius:3px; box-shadow:{{ c.ring }}; transform:{{ c.sleeveTf }}; transition:box-shadow .4s var(--ease-stage), transform .9s var(--ease-stage);"><div style="position:relative; z-index:1; width:100%; aspect-ratio:1; border-radius:3px; overflow:hidden; background:{{ c.tint }}; box-shadow:0 2px 3px rgba(0,0,0,.35), 0 30px 50px -24px rgba(60,35,15,.4);"><sc-if value="{{ c.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ c.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if><div aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,0) 40%); pointer-events:none;"></div></div></div>
+                <button type="button" onClick="{{ c.toggle }}" disabled="{{ c.na }}" aria-label="{{ c.btnLabel }}" style="position:absolute; z-index:4; left:{{ c.btnLeft }}; top:calc(50% - 26px); width:52px; height:52px; border:0; border-radius:50%; display:grid; place-items:center; background:#0C0C0C; color:#FFF4E9; cursor:pointer; box-shadow:0 10px 20px -8px rgba(60,35,15,.35); transition:transform .3s var(--ease-stage), left .9s var(--ease-stage);" style-hover="transform:scale(1.06);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;"><sc-if value="{{ c.playing }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg></sc-if><sc-if value="{{ c.paused }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg></sc-if></button>
+                <div style="position:absolute; z-index:2; left:0; right:0; bottom:0; height:2px; background:rgba(255,255,255,.18);"><div style="height:100%; width:{{ c.prog }}; background:var(--accent-default); transition:width .25s linear;"></div></div>
+              </div>
+              <div style="display:flex; align-items:baseline; gap:12px; padding-top:10px; border-top:1px solid {{ c.lineColor }}; transition:border-color .4s;">
+                <span style="font-size:15px; font-weight:500; font-variant-numeric:tabular-nums; color:{{ c.numColor }};">{{ c.num }}</span>
+                <div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-size:17px; line-height:22px; font-weight:500;">{{ c.title }}</span><span style="font-size:14px; line-height:20px; color:var(--text-secondary);">{{ c.artist }}</span><span style="font-size:12px; line-height:16px; color:var(--text-muted);">{{ c.note }}</span></div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+          <button type="button" onClick="{{ lockIn }}" disabled="{{ lockDisabled }}" style="display:inline-flex; align-items:center; gap:14px; min-height:52px; padding:0 28px; border:0; border-radius:999px; background:{{ lockBg }}; color:{{ lockFg }}; cursor:{{ lockCursor }}; font-size:17px; font-weight:500; transition:background .4s var(--ease-stage), color .4s;" style-focus="outline:2px solid var(--text-primary); outline-offset:3px;">Lock in my pick</button>
+          <span style="font-size:13px; color:var(--text-secondary);">{{ lockHint }}</span>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isReveal }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Reveal" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap:clamp(40px,6vw,88px); align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:24px; animation:ts-rise .8s var(--ease-stage) both;">
+          <span style="font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--text-secondary);">The room has spoken</span>
+          <h2 style="margin:0; font-size:clamp(52px,7.5vw,108px); line-height:.86; font-weight:600; letter-spacing:-.06em; text-wrap:balance;">{{ rev.headline }}</h2>
+          <p style="margin:0; max-width:440px; font-size:22px; line-height:1.3; font-weight:300; color:var(--text-secondary); text-wrap:pretty;">{{ rev.sub }}</p>
+          <div style="display:flex; flex-direction:column; gap:16px; max-width:480px; padding:18px 20px 20px; border-radius:var(--corner-card); background:rgba(232,212,188,.42); box-shadow:inset 0 0 0 1px rgba(60,35,15,.08);">
+            <div style="display:flex; align-items:center; gap:14px;">
+              <div aria-hidden="true" style="position:relative; display:flex; align-items:center; flex:none;">
+                <div style="width:44px; height:44px; border-radius:3px; overflow:hidden; background:#2A2326; transform:rotate(-5deg); box-shadow:1px 2px 4px rgba(60,35,15,.25), 4px 8px 14px -4px rgba(60,35,15,.3);"><sc-if value="{{ rev.pa.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ rev.pa.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if></div>
+                <span style="position:relative; z-index:2; width:22px; height:22px; margin:0 -8px; border-radius:50%; background:var(--accent-default); color:#FFF; display:grid; place-items:center; font-size:13px; font-weight:600; box-shadow:0 0 0 2px #EFDFCB;">=</span>
+                <div style="width:44px; height:44px; border-radius:3px; overflow:hidden; background:#2A2326; transform:rotate(4deg); box-shadow:1px 2px 4px rgba(60,35,15,.25), 4px 8px 14px -4px rgba(60,35,15,.3);"><sc-if value="{{ rev.pb.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ rev.pb.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if></div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-size:13px; line-height:18px; font-weight:500; color:var(--accent-default);">Why they connect</span><span style="font-size:15px; line-height:20px; font-weight:500; color:var(--text-primary);">{{ rev.pa.title }} &amp; {{ rev.pb.title }}</span></div>
+            </div>
+            <p style="margin:0; font-size:15px; line-height:22px; font-weight:300; letter-spacing:-.02em; color:var(--text-secondary); text-wrap:pretty;">{{ rev.note }}</p>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:22px;">
+          <div style="display:flex; flex-direction:column;">
+            <sc-for list="{{ rev.rows }}" as="r" hint-placeholder-count="3">
+              <div style="display:flex; flex-direction:column; gap:10px; padding:12px 0; opacity:{{ r.op }}; transform:{{ r.tf }}; transition:opacity .6s var(--ease-stage) {{ r.delay }}, transform .7s var(--ease-stage) {{ r.delay }};">
+                <div style="display:flex; align-items:center; gap:14px;">
+                  <div style="width:52px; height:52px; border-radius:3px; overflow:hidden; background:{{ r.tint }}; flex:none; box-shadow:{{ r.ring }};"><sc-if value="{{ r.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ r.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if></div>
+                  <div style="display:flex; flex-direction:column; gap:3px; min-width:0; flex:1;"><span style="font-size:17px; line-height:21px; font-weight:500;">{{ r.title }}</span><span style="font-size:13px; line-height:18px; color:var(--text-secondary);">{{ r.artist }}</span></div>
+                  <span style="font-size:28px; line-height:1; font-weight:600; letter-spacing:-.03em; color:{{ r.pctColor }}; font-variant-numeric:tabular-nums;">{{ r.pctShown }}</span>
+                </div>
+                <div style="height:3px; border-radius:2px; background:rgba(60,35,15,.08); overflow:hidden;"><div style="height:100%; width:{{ r.w }}; background:{{ r.bar }}; transition:width 1.2s var(--ease-stage) {{ r.delay }};"></div></div>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;"><sc-for list="{{ r.tags }}" as="tg" hint-placeholder-count="0"><span style="padding:4px 10px; border-radius:999px; background:{{ tg.bg }}; color:{{ tg.fg }}; font-size:12px; line-height:16px; font-weight:500; letter-spacing:-.01em; white-space:nowrap;">{{ tg.label }}</span></sc-for></div>
+              </div>
+            </sc-for>
+            <span style="padding-top:10px; font-size:11px; color:var(--text-muted);">Demo data · community votes are simulated for this prototype.</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <sc-for list="{{ rev.pts }}" as="pt" hint-placeholder-count="3"><div style="display:flex; justify-content:space-between; gap:12px; font-size:15px; line-height:24px; font-weight:300; color:var(--text-secondary);"><span>{{ pt.label }}</span><span style="font-weight:500; color:{{ pt.color }}; font-variant-numeric:tabular-nums;">{{ pt.val }}</span></div></sc-for>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; padding-top:10px; margin-top:4px; border-top:1px solid rgba(60,35,15,.12);"><span style="font-size:15px; font-weight:500;">This round</span><span style="font-size:32px; line-height:1; font-weight:600; letter-spacing:-.03em; font-variant-numeric:tabular-nums; color:var(--accent-default);">+{{ rev.total }}</span></div>
+          </div>
+          <div><button type="button" onClick="{{ afterReveal }}" style="display:inline-flex; align-items:center; gap:14px; min-height:52px; padding:0 28px; border:0; border-radius:999px; background:var(--accent-default); color:#FFF; cursor:pointer; font-size:17px; font-weight:500; transition:transform .3s var(--ease-stage), background .3s;" style-hover="background:var(--accent-hover); transform:translateY(-1px);" style-focus="outline:2px solid var(--text-primary); outline-offset:3px;">{{ rev.cta }}</button></div>
+        </div>
+      </section>
+    </sc-if>
+    </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isNext }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Next round" style="display:flex; flex-direction:column; justify-content:center; gap:28px; min-height:calc(100svh - 300px); animation:ts-rise .9s var(--ease-stage) both;">
+        <div style="display:flex; align-items:center; gap:14px;"><span style="font-size:22px; color:var(--accent-default);">Round {{ rnd.n }}</span><span style="width:40px; height:1px; background:rgba(60,35,15,.3);"></span><span style="font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--text-secondary);">{{ scoreShown }} pts so far</span></div>
+        <h2 style="margin:0; font-size:clamp(68px,13vw,184px); line-height:.8; font-weight:600; letter-spacing:-.065em;">{{ rnd.name }}</h2>
+        <p style="margin:0; max-width:520px; font-size:24px; line-height:1.3; font-weight:300; color:var(--text-secondary);">{{ rnd.blurb }}</p>
+        <div><button type="button" onClick="{{ toListen }}" style="display:inline-flex; align-items:center; gap:14px; min-height:52px; padding:0 28px; border:0; border-radius:999px; background:var(--accent-default); color:#FFF; cursor:pointer; font-size:17px; font-weight:500; transition:transform .3s var(--ease-stage), background .3s;" style-hover="background:var(--accent-hover); transform:translateY(-1px);" style-focus="outline:2px solid var(--text-primary); outline-offset:3px;">Start round {{ rnd.n }}</button></div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isResults }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Final results" style="display:flex; flex-direction:column; justify-content:center; min-height:calc(100svh - 240px); animation:ts-rise .8s var(--ease-stage) both;">
+      <div style="padding:clamp(14px,1.6vw,20px) clamp(20px,3vw,40px) clamp(24px,3vw,40px); border-radius:24px; background:linear-gradient(180deg, rgba(255,255,255,.52), rgba(255,255,255,.22)); -webkit-backdrop-filter:blur(22px) saturate(1.4); backdrop-filter:blur(22px) saturate(1.4); box-shadow:inset 0 1px 0 rgba(255,255,255,.85), inset 0 0 0 1px rgba(255,255,255,.45), 0 1px 2px rgba(60,35,15,.06), 0 30px 60px -30px rgba(60,35,15,.35);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin:0 0 clamp(28px,4vw,44px); padding:0 0 clamp(14px,1.6vw,20px); border-bottom:1px solid rgba(60,35,15,.12);">
+          <div style="display:flex; align-items:center; gap:12px; min-height:40px;"><span style="font-size:15px; font-weight:500;">Challenge complete</span><span aria-hidden="true" style="width:1px; height:16px; background:rgba(60,35,15,.18);"></span><span style="font-size:15px; font-weight:300; color:var(--text-secondary);">3 of 3 rounds</span></div>
+          <div style="display:flex; align-items:center; gap:16px;"><div aria-hidden="true" style="display:flex; gap:4px;"><span style="width:28px; height:4px; border-radius:4px; background:var(--accent-default);"></span><span style="width:28px; height:4px; border-radius:4px; background:var(--accent-default);"></span><span style="width:28px; height:4px; border-radius:4px; background:var(--accent-default);"></span></div><button type="button" onClick="{{ share }}" style="display:inline-flex; align-items:center; gap:8px; min-height:40px; padding:0 16px 0 14px; border:0; border-radius:999px; background:#0C0C0C; color:#FFF4E9; cursor:pointer; font-size:14px; font-weight:500;" style-hover="background:#2A2326;" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"></path><path d="M7 8l5-5 5 5"></path><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"></path></svg>{{ shareLabel }}</button></div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:clamp(32px,5vw,72px); align-items:center;">
+          <div style="display:flex; flex-direction:column; gap:28px;">
+            <div aria-hidden="true" style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; max-width:420px;"><sc-for list="{{ resCovers }}" as="c" hint-placeholder-count="3"><div style="aspect-ratio:1; border-radius:3px; overflow:hidden; background:{{ c.tint }}; box-shadow:2px 4px 6px rgba(60,35,15,.22), 10px 18px 26px -8px rgba(60,35,15,.3);"><sc-if value="{{ c.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ c.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if></div></sc-for></div>
+            <div style="display:flex; align-items:baseline; gap:12px;"><span style="font-size:clamp(80px,9vw,128px); line-height:.85; font-weight:600; letter-spacing:-.06em; color:var(--accent-default); font-variant-numeric:tabular-nums;">{{ scoreShown }}</span><span style="font-size:17px; font-weight:300; color:var(--text-secondary);">/ 700 pts</span></div>
+            <div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; max-width:420px;"><sc-for list="{{ resStats }}" as="st" hint-placeholder-count="3"><div style="display:flex; flex-direction:column; gap:4px;"><span style="font-size:22px; line-height:28px; font-weight:600; letter-spacing:-.03em; font-variant-numeric:tabular-nums;">{{ st.v }}</span><span style="font-size:13px; line-height:18px; font-weight:300; color:var(--text-secondary);">{{ st.l }}</span></div></sc-for></div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:24px; width:100%; max-width:460px; justify-self:start;">
+            <h2 style="margin:0; text-align:center; font-size:clamp(40px,4.6vw,64px); line-height:.92; font-weight:600; letter-spacing:-.05em; text-wrap:balance;">{{ resHeadline }}</h2>
+            <div style="display:flex; flex-direction:column; gap:6px; padding:16px 20px; border-radius:var(--corner-card); background:rgba(232,212,188,.42); box-shadow:inset 0 0 0 1px rgba(60,35,15,.08);"><sc-for list="{{ resBreak }}" as="b" hint-placeholder-count="4"><div style="display:flex; justify-content:space-between; gap:12px; font-size:15px; line-height:24px; font-weight:300; color:var(--text-secondary);"><span>{{ b.l }}</span><span style="font-weight:500; color:var(--text-primary); font-variant-numeric:tabular-nums;">{{ b.v }}</span></div></sc-for></div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap:10px;">
+              <button type="button" onClick="{{ toDiscover }}" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 28px; border:0; border-radius:999px; background:var(--accent-default); color:#FFF; cursor:pointer; font-size:17px; font-weight:500; transition:transform .3s var(--ease-stage), background .3s;" style-hover="background:var(--accent-hover); transform:translateY(-1px);" style-focus="outline:2px solid var(--text-primary); outline-offset:3px;">Explore the music</button>
+              <button type="button" onClick="{{ goHub }}" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 22px; border:0; border-radius:999px; background:transparent; box-shadow:inset 0 0 0 1.5px var(--text-primary); cursor:pointer; font-size:16px; font-weight:500; color:var(--text-primary);" style-hover="background:rgba(60,35,15,.06);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;">Back to The Arcade<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:block; flex:none;"><path d="M6 11h4"></path><path d="M8 9v4"></path><path d="M15 12h.01"></path><path d="M18 10h.01"></path><path d="M17.3 5H6.7a4 4 0 0 0-3.98 3.6L2 15.4A2.9 2.9 0 0 0 7.1 17.6L9 15.5h6l1.9 2.1A2.9 2.9 0 0 0 22 15.4l-.72-6.8A4 4 0 0 0 17.3 5z"></path></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isDiscover }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Discovered music" style="display:flex; flex-direction:column; gap:36px; animation:ts-rise .7s var(--ease-stage) both;">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-bottom:24px; border-bottom:1px solid rgba(60,35,15,.12);">
+          <div style="display:flex; flex-direction:column; gap:14px;"><span style="font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--text-secondary);">From today's challenge</span><h2 style="margin:0; font-size:clamp(48px,6.5vw,92px); line-height:.86; font-weight:600; letter-spacing:-.055em;">Songs you<br><span style="font-weight:400; letter-spacing:-.03em;">met today</span></h2></div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="button" onClick="{{ toResults }}" style="min-height:48px; padding:0 20px; border:0; border-radius:999px; background:rgba(60,35,15,.08); box-shadow:inset 0 0 0 1px rgba(60,35,15,.18); cursor:pointer; font-size:14px; font-weight:500; color:var(--text-primary);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;">Back to results</button>
+            <button type="button" onClick="{{ goHub }}" style="min-height:48px; padding:0 20px; border:0; border-radius:999px; background:#0C0C0C; cursor:pointer; font-size:14px; font-weight:500; color:#FFF4E9;" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;">Back to The Arcade</button>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap:0 40px;">
+          <sc-for list="{{ disc }}" as="d" hint-placeholder-count="6">
+            <div style="display:flex; align-items:center; gap:16px; padding:14px 0; border-bottom:1px solid rgba(60,35,15,.1);">
+              <span style="width:22px; font-size:16px; color:var(--text-muted);">{{ d.num }}</span>
+              <div style="position:relative; width:60px; height:60px; border-radius:3px; overflow:hidden; background:{{ d.tint }}; flex:none;">
+                <sc-if value="{{ d.hasArt }}" hint-placeholder-val="{{ false }}"><img data-art="{{ d.art }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if>
+                <button type="button" onClick="{{ d.toggle }}" disabled="{{ d.na }}" aria-label="{{ d.btnLabel }}" style="position:absolute; inset:0; border:0; display:grid; place-items:center; background:rgba(11,10,11,.38); color:#FFF; cursor:pointer;" style-focus="outline:2px solid var(--accent-default); outline-offset:-2px;"><sc-if value="{{ d.playing }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg></sc-if><sc-if value="{{ d.paused }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg></sc-if></button>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:2px; min-width:0; flex:1;"><span style="font-size:16px; line-height:20px; font-weight:500;">{{ d.title }}</span><span style="font-size:13px; line-height:18px; color:var(--text-secondary);">{{ d.artist }}</span><a href="/" style="font-size:12px; line-height:18px; font-weight:500; color:var(--accent-default);">Rate on Track Star →</a></div>
+              <button type="button" onClick="{{ d.save }}" aria-pressed="{{ d.saved }}" aria-label="{{ d.saveLabel }}" style="flex:none; width:44px; height:44px; border:0; border-radius:50%; display:grid; place-items:center; background:transparent; color:{{ d.heart }}; cursor:pointer;" style-hover="background:rgba(60,35,15,.08);" style-focus="outline:2px solid var(--accent-default); outline-offset:3px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="{{ d.heartFill }}" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.2 3.3 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.7 0 5.8 3.7 4.2 6.9C19 15.6 12 20 12 20z"></path></svg></button>
+            </div>
+          </sc-for>
+        </div>
+        <span style="font-size:11px; color:var(--text-muted);">Previews and artwork via Apple Music. Where a preview isn't available, play is disabled.</span>
+      </section>
+    </sc-if>
+  </main>
+  <sc-if value="{{ isHub }}" hint-placeholder-val="{{ true }}">
+    <footer style="position:relative; z-index:1; border-top:1px solid var(--border-hairline);">
+      <div style="max-width:1200px; margin:0 auto; padding:24px clamp(20px,4vw,56px); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-size:13px; line-height:18px; font-weight:400; color:var(--text-secondary);">
+        <span>© 2026 Track Star</span>
+        <nav aria-label="Legal" style="display:flex; gap:24px;">
+          <a href="#" style="color:var(--text-secondary);" style-hover="color:var(--text-primary);">Terms</a>
+          <a href="#" style="color:var(--text-secondary);" style-hover="color:var(--text-primary);">Privacy</a>
+          <a href="#" style="color:var(--text-secondary);" style-hover="color:var(--text-primary);">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </sc-if>
+</div>
+</x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#F5E8D6"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#F5E8D6"/><circle cx="660" cy="400" r="190" fill="#141314"/><circle cx="660" cy="400" r="62" fill="#FF5B00"/><rect x="380" y="220" width="360" height="360" rx="6" fill="#FF5B00"/><text x="560" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="120" fill="#FFF4E9">TS</text></svg></template>
+<script type="text/x-dc" data-dc-script>
+const CH = {
+  num: '001', date: 'Oct 12',
+  rounds: [
+    { name: 'Easy', blurb: 'A recognizable emotional connection. Start with the feeling everyone knows.',
+      ref: { t: 'Dancing Queen', a: 'ABBA' },
+      cands: [
+        { t: 'September', a: 'Earth, Wind & Fire', votes: 74 },
+        { t: 'Hurt', a: 'Johnny Cash', votes: 9 },
+        { t: 'Teardrop', a: 'Massive Attack', votes: 17 },
+      ], curator: 0,
+      note: 'Both are pure release — bright horns and strings, a chorus built for a crowded room, and a joy that feels a little nostalgic even the first time you hear it.' },
+    { name: 'Unexpected', blurb: 'Different genres, different decades. The atmosphere is the only thing they share.',
+      ref: { t: 'Nightcall', a: 'Kavinsky' },
+      cands: [
+        { t: 'Blue in Green', a: 'Miles Davis', votes: 31 },
+        { t: 'Midnight City', a: 'M83', votes: 54 },
+        { t: 'Strangers in the Night', a: 'Frank Sinatra', votes: 15 },
+      ], curator: 0,
+      note: 'Nightcall is a drive through an empty city at 2am. Our curator hears that same solitude in Blue in Green — slow, blue, and lit by streetlights, sixty years apart.' },
+    { name: 'Trust your instinct', blurb: 'A nuanced connection with more than one honest answer. Go with your gut.',
+      ref: { t: 'Motion Sickness', a: 'Phoebe Bridgers' },
+      cands: [
+        { t: 'Dreams', a: 'Fleetwood Mac', votes: 41 },
+        { t: 'Here Comes the Sun', a: 'The Beatles', votes: 22 },
+        { t: 'Liability', a: 'Lorde', votes: 37 },
+      ], curator: 2,
+      note: 'Motion Sickness is anger dressed up as a shrug. Dreams and Liability both carry that bittersweet distance — the room split almost evenly, and both readings hold.' },
+  ],
+};
+const SOON = [
+  { no: '02', num: 'Game 02', title: 'Daily Track', tagline: 'One prompt. Your best song wins.', desc: "Pick the perfect song for today's prompt and compete for the community's vote.", bg: '#E6B437', fg: '#0C0C0C', glyph: '24h' },
+  { no: '03', num: 'Game 03', title: 'Album Battles', tagline: 'Two albums. One winner.', desc: 'Settle impossible music debates through head-to-head album battles.', bg: '#2650A0', fg: '#FFFFFF', glyph: 'VS' },
+  { no: '04', num: 'Game 04', title: 'Music Twin', tagline: 'Find your musical soulmate.', desc: 'Discover people whose music taste matches yours.', bg: '#0E6E52', fg: '#FFFFFF', glyph: '1:1' },
+  { no: '05', num: 'Game 05', title: 'Mystery Track', tagline: 'How well do you know your music?', desc: 'Identify mystery songs from short audio clips and limited clues.', bg: '#EADBC0', fg: '#0C0C0C', glyph: '?' },
+];
+const TINTS = ['#C9B79C', '#8E7F6C', '#B5A48C', '#6F6255', '#D8C8AE', '#A28F78'];
+const KEY = 'ts-arcade-v1';
+const key = tr => tr.t + '|' + tr.a;
+const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+
+function __R(k, f) { return (window.__resources && window.__resources[k]) || f; }
+class Component extends DCLogic {
+  root = React.createRef();
+  state = { screen: 'hub', ri: 0, picks: [], sel: null, saved: {}, media: {}, playing: null, prog: 0, cur: 0, revealIn: false, scoreShown: 0, fadeIn: true, copied: false, locked: false };
+
+  componentDidMount() {
+    this.plx = { mx: 0, my: 0, cx: 0, cy: 0 };
+    this.onPlxMove = ev => { this.plx.mx = (ev.clientX / window.innerWidth) * 2 - 1; this.plx.my = (ev.clientY / window.innerHeight) * 2 - 1; };
+    window.addEventListener('pointermove', this.onPlxMove, { passive: true });
+    const PK = [0, 8, 20, 38], still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const plxTick = () => {
+      this.plxRaf = requestAnimationFrame(plxTick);
+      const rt = this.root.current, box = rt && rt.querySelector('[data-plxbox]'); if (!box || still) return;
+      const p = this.plx; p.cx += (p.mx - p.cx) * 0.05; p.cy += (p.my - p.cy) * 0.05;
+      box.querySelectorAll('[data-plx]').forEach(l => { const k = PK[+l.dataset.plx]; l.style.transform = 'translate3d(' + (-p.cx * k).toFixed(2) + 'px,' + (-p.cy * k * 0.5).toFixed(2) + 'px,0)'; });
+    };
+    plxTick();
+    this.onDocClick = e => { if (this.state.menuOpen && !(e.target instanceof Element && e.target.closest('[data-profile]'))) this.setState({ menuOpen: false }); };
+    document.addEventListener('click', this.onDocClick);
+    this.onScroll = () => { const v = window.scrollY > 8; if (v !== !!this.state.scrolled) this.setState({ scrolled: v }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true }); this.onScroll();
+    this.rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try { const p = JSON.parse(sessionStorage.getItem(KEY) || 'null'); if (p) this.setState({ screen: p.screen || 'hub', ri: p.ri || 0, picks: p.picks || [], saved: p.saved || {}, scoreShown: this.total(p.picks || [], p.screen === 'results'), revealIn: p.screen === 'reveal' }); } catch (e) {}
+    this.audio = new Audio(); this.audio.preload = 'none';
+    this.audio.addEventListener('timeupdate', () => { const d = this.audio.duration || 30; this.setState({ prog: this.audio.currentTime / d, cur: this.audio.currentTime }); });
+    this.audio.addEventListener('ended', () => this.setState({ playing: null, prog: 0, cur: 0 }));
+    this.onPop = e => { const st = e.state; if (st && st.screen) { this.stop(); this.setState({ screen: st.screen, ri: st.ri || 0, revealIn: st.screen === 'reveal', scoreShown: this.total(this.state.picks, st.screen === 'results') }); } };
+    window.addEventListener('popstate', this.onPop);
+    this.onKey = e => {
+      if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+      const st = this.state, r = CH.rounds[st.ri];
+      if ((st.screen === 'listen' || st.screen === 'choose') && e.code === 'Space' && !(e.target && e.target.tagName === 'BUTTON')) { e.preventDefault(); this.toggle(r.ref); }
+      if (st.screen === 'choose' && !st.locked && ['1','2','3'].includes(e.key)) this.setState({ sel: +e.key - 1 });
+    };
+    window.addEventListener('keydown', this.onKey);
+    history.replaceState({ screen: this.state.screen, ri: this.state.ri }, '');
+    const all = [];
+    CH.rounds.forEach(r => { all.push(r.ref); r.cands.forEach(c => all.push(c)); });
+    all.forEach(tr => this.lookup(tr));
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.plxRaf); window.removeEventListener('pointermove', this.onPlxMove); window.removeEventListener('popstate', this.onPop); window.removeEventListener('keydown', this.onKey); this.stop(); cancelAnimationFrame(this.countRaf); }
+  componentDidUpdate(pp, ps) {
+    const rt = this.root.current; if (rt) rt.querySelectorAll('img[data-art]').forEach(im => { const v = im.getAttribute('data-art'); if (v && v.indexOf('{{') < 0 && im.getAttribute('src') !== v) im.setAttribute('src', v); });
+    const { screen, ri, picks, saved } = this.state;
+    const prev = this._persisted || {};
+    if (prev.screen !== screen || prev.ri !== ri || prev.picks !== picks || prev.saved !== saved) {
+      this._persisted = { screen, ri, picks, saved };
+      try { sessionStorage.setItem(KEY, JSON.stringify({ screen, ri, picks, saved })); } catch (e) {}
+    }
+  }
+  async lookup(tr) {
+    const k = key(tr);
+    if (this.state.media[k]) return;
+    this.setState(s => ({ media: { ...s.media, [k]: { status: 'loading' } } }));
+    try {
+      const q = encodeURIComponent(tr.t + ' ' + tr.a);
+      const res = await fetch(`https://itunes.apple.com/search?term=${q}&entity=song&limit=5&media=music`);
+      const j = await res.json();
+      const norm = x => (x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const hit = (j.results || []).find(r => norm(r.artistName).includes(norm(tr.a).slice(0, 6)) && norm(r.trackName).includes(norm(tr.t).slice(0, 6))) || null;
+      const m = hit ? { status: hit.previewUrl ? 'ok' : 'na', url: hit.previewUrl || null, art: hit.artworkUrl100 ? hit.artworkUrl100.replace('100x100bb', '600x600bb') : null } : { status: 'na' };
+      this.setState(s => ({ media: { ...s.media, [k]: m } }));
+    } catch (e) { this.setState(s => ({ media: { ...s.media, [k]: { status: 'na' } } })); }
+  }
+  stop() { if (this.audio) { this.audio.pause(); } if (this.state.playing) this.setState({ playing: null, prog: 0, cur: 0 }); }
+  toggle(tr) {
+    const k = key(tr), m = this.state.media[k];
+    if (!m || m.status !== 'ok') return;
+    if (this.state.playing === k) { this.audio.pause(); this.setState({ playing: null }); return; }
+    this.audio.pause(); this.audio.src = m.url; this.audio.currentTime = 0;
+    const pr = this.audio.play(); if (pr && pr.then) pr.then(() => this.setState({ playing: k, prog: 0, cur: 0 })).catch(() => this.setState({ playing: null }));
+  }
+  roundPts(i, pick) { const r = CH.rounds[i]; if (pick == null) return { base: 0, com: 0, cur: 0 }; const top = this.topIdx(r); return { base: 50, com: pick === top ? 100 : 0, cur: pick === r.curator ? 50 : 0 }; }
+  topIdx(r) { let t = 0; r.cands.forEach((c, i) => { if (c.votes > r.cands[t].votes) t = i; }); return t; }
+  total(picks, done) { let s = 0; picks.forEach((p, i) => { const x = this.roundPts(i, p); s += x.base + x.com + x.cur; }); if (done && picks.length === 3) s += 100; return s; }
+  countTo(target) {
+    cancelAnimationFrame(this.countRaf);
+    const from = this.state.scoreShown;
+    if (this.rm || from === target) { this.setState({ scoreShown: target }); return; }
+    const t0 = performance.now(), dur = 900;
+    const step = now => { const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3); this.setState({ scoreShown: Math.round(from + (target - from) * e) }); if (p < 1) this.countRaf = requestAnimationFrame(step); };
+    this.countRaf = requestAnimationFrame(step);
+  }
+  go(screen, extra = {}) {
+    this.stop();
+    const apply = () => {
+      this.setState({ screen, fadeIn: false, ...extra }, () => {
+        history.pushState({ screen, ri: this.state.ri }, '');
+        window.scrollTo(0, 0);
+        setTimeout(() => this.setState({ fadeIn: true }), 30);
+      });
+    };
+    apply();
+  }
+  renderVals() {
+    const st = this.state, r = CH.rounds[st.ri], md = st.media;
+    const mk = (tr, i) => {
+      const k = key(tr), m = md[k] || { status: 'loading' }, playing = st.playing === k;
+      return { title: tr.t, artist: tr.a, art: m.art || '', hasArt: !!m.art, tint: TINTS[i % TINTS.length], na: m.status !== 'ok', playing, paused: !playing,
+        toggle: () => this.toggle(tr), btnLabel: m.status === 'ok' ? (playing ? 'Pause ' : 'Play ') + tr.t : 'Preview unavailable',
+        prog: playing ? (st.prog * 100).toFixed(1) + '%' : '0%', spin: playing ? 'running' : 'paused', discX: playing ? '46%' : '6%', discR: playing ? '0deg' : '-30deg', sleeveTf: playing ? 'translateX(-3%) rotate(-3deg)' : 'none' };
+    };
+    const ref = mk(r.ref, st.ri);
+    const refM = md[key(r.ref)] || { status: 'loading' };
+    ref.status = refM.status === 'loading' ? 'Loading preview…' : refM.status === 'na' ? 'Preview unavailable — you can still play on.' : ref.playing ? fmt(st.cur) + ' / 0:30 · 30-second preview' : 'Press play · 30-second preview';
+    ref.miniLabel = ref.playing ? 'Now playing · reference' : 'Replay the reference';
+    const cands = r.cands.map((c, i) => {
+      const b = mk(c, i + 3), sel = st.sel === i;
+      return { ...b, selected: sel, selLabel: (sel ? 'Selected: ' : 'Select ') + c.t + ' by ' + c.a, select: () => !st.locked && this.setState({ sel: i }),
+        note: (md[key(c)] || {}).status === 'na' ? 'Preview unavailable' : ' ',
+        cardBg: sel ? '#FFFDF9' : 'rgba(255,252,247,.62)', lift: sel ? 'translateY(-6px) rotate(-.6deg)' : 'none',
+        shadow: sel ? 'inset 0 0 0 2px var(--accent-default), 0 28px 44px -24px rgba(60,35,15,.55)' : 'inset 0 0 0 1px rgba(60,35,15,.08), 0 14px 28px -22px rgba(60,35,15,.45)',
+        num: '0' + (i + 1), lift: sel ? 'translateY(-10px)' : 'none', discX: b.playing ? '30%' : sel ? '18%' : '0%', sleeveTf: b.playing ? 'translateX(-16%)' : sel ? 'translateX(-9%)' : 'none', btnLeft: b.playing ? 'calc(34% - 26px)' : sel ? 'calc(41% - 26px)' : 'calc(50% - 26px)', ring: sel ? '0 0 0 2px var(--accent-default), 0 0 40px -6px rgba(255,91,0,.55)' : 'none', lineColor: sel ? 'var(--accent-default)' : 'rgba(60,35,15,.14)', numColor: sel ? 'var(--accent-default)' : 'var(--text-muted)' };
+    });
+    const pick = st.picks[st.ri], top = this.topIdx(r), rp = this.roundPts(st.ri, pick);
+    const matched = pick === top;
+    const heads = matched ? (pick === r.curator ? 'Same wavelength.' : 'You felt it.') : (pick === r.curator ? 'Great minds listen alike.' : 'Not everyone hears it the same way.');
+    const subs = matched ? `${r.cands[pick] ? r.cands[pick].votes : 0}% of players heard it the way you did.` : pick != null ? `Only ${r.cands[pick].votes}% picked what you picked — and that's what makes it yours.` : '';
+    const pairOf = tr => { const m = md[key(tr)] || {}; return { title: tr.t, art: m.art || '', hasArt: !!m.art }; };
+    const rev = { headline: heads, sub: subs, note: r.note, pa: pairOf(r.ref), pb: pairOf(r.cands[top]), total: rp.base + rp.com + rp.cur,
+      cta: st.ri < 2 ? 'Next round' : 'See my results',
+      rows: r.cands.map((c, i) => {
+        const b = mk(c, i + 3), you = i === pick, isTop = i === top, isCur = i === r.curator;
+        const tags = [];
+        if (you) tags.push({ label: 'Your pick', bg: 'var(--accent-default)', fg: '#FFF' });
+        if (isTop) tags.push({ label: 'Most picked', bg: '#0C0C0C', fg: '#FFF4E9' });
+        if (isCur) tags.push({ label: "Curator's pick", bg: 'rgba(60,35,15,.1)', fg: 'var(--text-primary)' });
+        const shown = st.revealIn ? c.votes : 0;
+        return { ...b, tags, w: st.revealIn ? c.votes + '%' : '0%', delay: (0.15 + i * 0.12) + 's', pctShown: shown + '%',
+          bar: you ? 'var(--accent-default)' : '#0C0C0C', op: st.revealIn ? 1 : 0, tf: st.revealIn ? 'none' : 'translateY(12px)',
+          ring: you ? '0 0 0 2px var(--accent-default)' : 'none', pctColor: you ? 'var(--accent-default)' : 'var(--text-primary)' };
+      }),
+      pts: [
+        { label: 'Round complete', val: '+50', color: '#3A322C' },
+        { label: 'Matched the community', val: rp.com ? '+100' : '—', color: rp.com ? 'var(--text-primary)' : 'var(--text-muted)' },
+        { label: "Matched the curator", val: rp.cur ? '+50' : '—', color: rp.cur ? 'var(--text-primary)' : 'var(--text-muted)' },
+      ] };
+    const allTracks = [];
+    CH.rounds.forEach(x => { allTracks.push(x.ref); x.cands.forEach(c => allTracks.push(c)); });
+    const covers = (list, pos) => list.map((tr, i) => { const m = md[key(tr)] || {}; return { art: m.art || '', hasArt: !!m.art, tint: TINTS[i % TINTS.length], ...pos[i] }; });
+    const comM = st.picks.filter((p, i) => p === this.topIdx(CH.rounds[i])).length;
+    const curM = st.picks.filter((p, i) => p === CH.rounds[i].curator).length;
+    const done = st.picks.length === 3;
+    const totalFinal = this.total(st.picks, true);
+    const s = st.screen;
+    return { R: {r_plx_1_sky_png: __R('r_plx_1_sky_png', 'assets/export/plx-1-sky.webp'), r_plx_2_distant_png: __R('r_plx_2_distant_png', 'assets/export/plx-2-distant.webp'), r_plx_3_mid_png: __R('r_plx_3_mid_png', 'assets/export/plx-3-mid.webp'), r_plx_4_fore_png: __R('r_plx_4_fore_png', 'assets/export/plx-4-fore.webp'), r_logo_trackstar_orange_svg: __R('r_logo_trackstar_orange_svg', 'assets/logo-trackstar-orange.svg'), r_avatar_me_png: __R('r_avatar_me_png', 'assets/export/avatar-me.webp'), r_arcade_hero_2_png: __R('r_arcade_hero_2_png', 'assets/export/arcade-hero-2.webp'), r_game_daily_track_png: __R('r_game_daily_track_png', 'assets/export/game-daily-track.webp'), r_game_album_battles_png: __R('r_game_album_battles_png', 'assets/export/game-album-battles.webp'), r_game_music_twin_png: __R('r_game_music_twin_png', 'assets/export/game-music-twin.webp'), r_game_mystery_track_png: __R('r_game_mystery_track_png', 'assets/export/game-mystery-track.webp')},
+      root: this.root, ch: CH,
+      menuOpen: !!st.menuOpen, avatarSize: 36, toggleMenu: () => this.setState(x => ({ menuOpen: !x.menuOpen })),
+      theme: st.theme || 'light', chromeTheme: st.theme || 'light',
+      goHubLink: e => { if (s !== 'hub') { e.preventDefault(); this.go('hub'); } },
+      ...(() => { const dk = (st.theme || 'light') === 'dark'; return { glass: dk ? { bg: 'linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04))', shadow: 'inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.08), 0 14px 32px -16px rgba(0,0,0,.6)', menu: 'linear-gradient(180deg, rgba(28,28,30,.88), rgba(18,18,20,.84))', menuShadow: 'inset 0 1px 0 rgba(255,255,255,.08), inset 0 0 0 1px rgba(255,255,255,.06), 0 22px 44px -18px rgba(0,0,0,.7)', dotRing: '#111113' }
+        : { bg: 'linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.16))', shadow: 'inset 0 1px 0 rgba(255,255,255,.75), inset 0 0 0 1px rgba(255,255,255,.38), inset 0 -1px 0 rgba(60,35,15,.06), 0 1px 2px rgba(60,35,15,.06), 0 14px 32px -16px rgba(60,35,15,.30)', menu: 'linear-gradient(180deg, rgba(255,251,245,.86), rgba(252,245,236,.80))', menuShadow: 'inset 0 1px 0 rgba(255,255,255,.7), inset 0 0 0 1px rgba(255,255,255,.35), 0 1px 2px rgba(60,35,15,.08), 0 22px 44px -18px rgba(60,35,15,.38)', dotRing: '#F3E7D6' } }; })(),
+      themeOpts: ['light', 'dark'].map(v => { const cur = st.theme || 'light'; const on = cur === v; return { label: v === 'light' ? 'Light' : 'Dark', pick: () => this.setState({ theme: v }), bg: on ? (v === 'dark' ? '#2C2C2F' : '#FFFAF3') : 'transparent', color: on ? 'var(--text-primary)' : 'var(--text-secondary)', shadow: on ? '0 1px 2px rgba(60,35,15,.12), inset 0 0 0 1px rgba(60,35,15,.06)' : 'none' }; }),
+      stage: s !== 'hub', pageBg: s === 'hub' ? (st.theme === 'dark' ? '#0A0A0B' : '#F5E8D6') : '#F5E8D6', ink: 'var(--text-primary)',
+      headBg: s === 'hub' ? 'rgba(246,238,226,.78)' : 'rgba(11,10,11,.55)', rule: s === 'hub' ? 'rgba(12,12,12,.2)' : 'rgba(237,231,223,.2)',
+      glow: (() => { const tr = s === 'choose' && st.sel != null ? r.cands[st.sel] : r.ref; const m = md[key(tr)] || {}; return { has: !!m.art, art: m.art || '' }; })(),
+      hubDisc: { x: st.hubHover ? '46%' : '24%', spin: st.hubHover ? 'running' : 'paused' },
+      hubPair: [CH.rounds[1].ref, CH.rounds[1].cands[1]].map((tr, i) => { const m = md[key(tr)] || {}, h = !!st.hubHover, L = i === 0;
+        return { art: m.art || '', hasArt: !!m.art, left: L ? '4%' : '38%', top: L ? '26%' : '6%', z: L ? 2 : 1, label: '#EDE7DF',
+          tf: h ? (L ? 'translate(-3%,3%) rotate(-7deg)' : 'translate(3%,-2%) rotate(6deg)') : (L ? 'rotate(-4deg)' : 'rotate(5deg)'),
+          discTf: h ? (L ? 'translate(-28%,0)' : 'translate(28%,0)') : 'none', delay: h ? '.12s' : '0s', spin: h ? 'running' : 'paused' }; }),
+      barGlass: { o: st.scrolled ? 1 : 0, h: st.scrolled ? '68px' : '104px', top: st.scrolled ? '6px' : '24px', logo: st.scrolled ? '40px' : '54px', bg: st.theme === 'dark' ? 'rgba(11,10,11,.55)' : 'rgba(246,238,226,.62)', shadow: st.theme === 'dark' ? 'inset 0 -1px 0 rgba(255,255,255,.08)' : 'inset 0 -1px 0 rgba(60,35,15,.10), 0 10px 30px -20px rgba(60,35,15,.35)' },
+      hubEq: { o: st.hubHover ? 1 : 0, tf: st.hubHover ? 'scale(1)' : 'scale(.6)' },
+      hubSleeve: (() => { const m = md[key(CH.rounds[1].ref)] || {}; return { art: m.art || '', hasArt: !!m.art, tint: '#2A2326' }; })(),
+      introSleeve: (() => { const m = md[key(CH.rounds[0].ref)] || {}; return { art: m.art || '', hasArt: !!m.art, tint: '#2A2326' }; })(),
+      hubHoverOn: () => this.setState({ hubHover: true }), hubHoverOff: () => this.setState({ hubHover: false }),
+      isHub: s === 'hub', isIntro: s === 'intro', isListen: s === 'listen', isChoose: s === 'choose', isReveal: s === 'reveal', isNext: s === 'next', isResults: s === 'results', isDiscover: s === 'discover',
+      inGame: s !== 'hub', showRoundBar: ['listen', 'choose', 'reveal'].includes(s),
+      fade: { o: st.fadeIn ? 1 : 0, t: st.fadeIn ? 'none' : 'translateY(10px)' },
+      soon: SOON.map(g => ({ ...g, img: { 'Daily Track': '' + __R('r_game_daily_track_png', 'assets/export/game-daily-track.webp') + '', 'Album Battles': '' + __R('r_game_album_battles_png', 'assets/export/game-album-battles.webp') + '', 'Music Twin': '' + __R('r_game_music_twin_png', 'assets/export/game-music-twin.webp') + '', 'Mystery Track': '' + __R('r_game_mystery_track_png', 'assets/export/game-mystery-track.webp') + '' }[g.title], edge: { '#E6B437': '#B98A1E', '#2650A0': '#183772', '#0E6E52': '#084B37', '#EADBC0': '#C9B591' }[g.bg] || '#2A2326' })),
+      hubCovers: covers(CH.rounds.map(x => x.ref), [{ x: '6%', y: '14%', w: '46%', r: '-7deg' }, { x: '30%', y: '2%', w: '48%', r: '3deg' }, { x: '50%', y: '30%', w: '46%', r: '9deg' }]),
+      introCovers: covers([CH.rounds[0].ref, CH.rounds[0].cands[0], CH.rounds[1].ref, CH.rounds[2].ref], [{ x: '2%', y: '22%', w: '42%', r: '-8deg' }, { x: '28%', y: '4%', w: '44%', r: '2deg' }, { x: '52%', y: '30%', w: '44%', r: '10deg' }, { x: '24%', y: '52%', w: '40%', r: '-3deg' }]),
+      roundsInfo: CH.rounds.map((x, i) => ({ n: i + 1, name: x.name, line: i < CH.rounds.length - 1 ? '1px solid rgba(60,35,15,.12)' : '0', wave: ['M1 10h9l2-3 2 6 2-5 2 4 2-3 2 2h22', 'M1 10h8l2-5 2 9 2-7 2 6 2-8 2 7 2-4 2 2h19', 'M1 10h11l3-8 3 15 3-12 3 7h21'][i] })),
+      rnd: { n: st.ri + 1, name: r.name, blurb: r.blurb },
+      pips: CH.rounds.map((x, i) => ({ bg: i < st.ri || (i === st.ri && s === 'reveal') ? 'var(--accent-default)' : i === st.ri ? 'var(--text-primary)' : 'rgba(60,35,15,.18)' })),
+      scoreShown: st.scoreShown,
+      ref, cands, rev,
+      lockDisabled: st.sel == null || st.locked, lockBg: st.sel == null ? 'rgba(60,35,15,.08)' : 'var(--accent-default)', lockFg: st.sel == null ? 'var(--text-muted)' : '#FFF', lockCursor: st.sel == null ? 'not-allowed' : 'pointer',
+      lockHint: st.sel == null ? 'Pick one — or press 1, 2, 3.' : 'You can still change your mind.',
+      resCovers: covers(CH.rounds.map((x, i) => st.picks[i] != null ? x.cands[st.picks[i]] : x.ref), [{}, {}, {}]),
+      resStats: [{ v: comM + '/3', l: 'Community matches' }, { v: curM + '/3', l: 'Curator matches' }, { v: allTracks.length, l: 'Songs discovered' }],
+      resHeadline: comM >= 2 ? 'Your ears are in tune with the room.' : curM >= 2 ? 'You listen like a curator.' : 'Your taste, your own frequency.',
+      resBreak: [{ l: 'Rounds complete', v: (st.picks.length * 50) + ' pts' }, { l: 'Community matches', v: (comM * 100) + ' pts' }, { l: 'Curator matches', v: (curM * 50) + ' pts' }, { l: 'Full challenge bonus', v: (done ? 100 : 0) + ' pts' }],
+      shareLabel: st.copied ? 'Copied to clipboard' : 'Share result',
+      disc: allTracks.map((tr, i) => { const b = mk(tr, i), k = key(tr), sv = !!st.saved[k]; return { ...b, num: String(i + 1).padStart(2, '0'), saved: sv, saveLabel: (sv ? 'Remove ' : 'Save ') + tr.t, heart: sv ? 'var(--accent-default)' : 'var(--text-secondary)', heartFill: sv ? 'currentColor' : 'none', save: () => this.setState(x => ({ saved: { ...x.saved, [k]: !x.saved[k] } })) }; }),
+      goHub: () => this.go('hub'),
+      openGame: () => this.go('intro'),
+      startGame: () => this.go('listen', { ri: 0, picks: [], sel: null, scoreShown: 0, locked: false }),
+      restart: () => this.go('intro', { ri: 0, picks: [], sel: null, scoreShown: 0, locked: false, copied: false }),
+      toChoose: () => this.go('choose', { sel: st.picks[st.ri] != null ? st.picks[st.ri] : null, locked: false }),
+      toListen: () => this.go('listen'),
+      lockIn: () => {
+        if (st.sel == null || st.locked) return;
+        const picks = st.picks.slice(0, st.ri); picks[st.ri] = st.sel;
+        this.go('reveal', { picks, locked: true, revealIn: false });
+        setTimeout(() => { this.setState({ revealIn: true }); this.countTo(this.total(picks, false)); }, this.rm ? 0 : 450);
+      },
+      afterReveal: () => {
+        if (st.ri < 2) this.go('listen', { ri: st.ri + 1, sel: null, locked: false });
+        else { this.go('results'); setTimeout(() => this.countTo(totalFinal), this.rm ? 0 : 300); }
+      },
+      toDiscover: () => this.go('discover'),
+      toResults: () => this.go('results', { scoreShown: totalFinal }),
+      share: () => {
+        const txt = `Same Energy · Challenge ${CH.num}\n${totalFinal}/700 pts · ${comM}/3 community · ${curM}/3 curator\nPlay on Track Star — The Arcade`;
+        const done2 = () => { this.setState({ copied: true }); setTimeout(() => this.setState({ copied: false }), 2200); };
+        if (navigator.share) navigator.share({ text: txt }).then(done2).catch(() => {});
+        else if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done2).catch(() => {});
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

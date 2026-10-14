@@ -1,0 +1,71 @@
+/* Motion — production's scale, copied value for value from core/static/core/motion.css (SOF-93).
+   Additive: `--ease-stage` is untouched and keeps every existing user. Nothing in this file is
+   applied by a component yet; see guidelines/motion.card.html for what has adopted it. */
+:root{
+/* durations */
+--duration-stagger:40ms; /* @kind other */
+--duration-micro:80ms; /* @kind other */
+--duration-quick:150ms; /* @kind other */
+--duration-fast:250ms; /* @kind other */
+--duration-medium:350ms; /* @kind other */
+--duration-slow:400ms; /* @kind other */
+--duration-very-slow:500ms; /* @kind other */
+/* eases — three of these are CSS keywords in production, not curves. Kept literal. */
+--ease-smooth-out:cubic-bezier(.22,1,.36,1); /* @kind other */
+--ease-in-out:ease-in-out; /* @kind other */
+--ease-out:ease-out; /* @kind other */
+--ease-linear:linear; /* @kind other */
+--ease-bounce:cubic-bezier(.34,1.36,.64,1); /* @kind other */
+--ease-bounce-strong:cubic-bezier(.34,3.85,.64,1); /* @kind other */
+/* distances */
+--distance-micro:4px;--distance-small:6px;--distance-base:8px;--distance-medium:12px;--distance-large:30px;
+/* scales — start values, which is why reduced motion resolves them to 1 and not to 0 */
+--scale-large:.96; /* @kind other */
+--scale-medium:.97; /* @kind other */
+--scale-small:.98; /* @kind other */
+--scale-tiny:.99; /* @kind other */
+/* blurs */
+--blur-small:2px;--blur-medium:3px;--blur-large:8px;
+/* The error shake. Legs run swing/swing/settle/settle — 80/80/40/40, 240ms total — so the
+   keyframe stops below are recomputed for that ratio: 33.33% / 66.67% / 83.33%. Those
+   percentages are LITERALS: retune them by hand if a leg duration changes. */
+--shake-distance:var(--distance-small);--shake-overshoot:var(--distance-micro);
+--shake-leg-swing:var(--duration-micro); /* @kind other */
+--shake-leg-settle:var(--duration-stagger); /* @kind other */
+--shake-ease:var(--ease-smooth-out); /* @kind other */
+}
+@keyframes ts-shake{
+0%{transform:translateX(0)}
+33.33%{transform:translateX(calc(var(--shake-distance) * -1))}
+66.67%{transform:translateX(var(--shake-distance))}
+83.33%{transform:translateX(calc(var(--shake-overshoot) * -1))}
+100%{transform:translateX(0)}
+}
+/* Opt-in, and no component sets it: adopting the shake on an invalid field is a later decision. */
+.ts-shake{animation:ts-shake calc(var(--shake-leg-swing) * 2 + var(--shake-leg-settle) * 2) var(--shake-ease)}
+@media (prefers-reduced-motion:reduce){
+:root{
+--duration-stagger:0s; /* @kind other */
+--duration-micro:0s; /* @kind other */
+--duration-quick:0s; /* @kind other */
+--duration-fast:0s; /* @kind other */
+--duration-medium:0s; /* @kind other */
+--duration-slow:0s; /* @kind other */
+--duration-very-slow:0s; /* @kind other */
+--distance-micro:0px;--distance-small:0px;--distance-base:0px;--distance-medium:0px;--distance-large:0px;
+--scale-large:1; /* @kind other */
+--scale-medium:1; /* @kind other */
+--scale-small:1; /* @kind other */
+--scale-tiny:1; /* @kind other */
+--blur-small:0px;--blur-medium:0px;--blur-large:0px;
+}
+/* Then everything not yet on the tokens collapses as well. 0.01ms, never 0: `transitionend` and
+   `animationend` listeners must still fire, and a 0 breaks any code waiting on those events. */
+*,*::before,*::after{
+transition-duration:.01ms !important;transition-delay:0ms !important;
+animation-duration:.01ms !important;animation-delay:0ms !important;
+animation-iteration-count:1 !important;scroll-behavior:auto !important}
+/* The shake is the one exception — animation none, transform none. The toast still speaks; the
+   card simply does not move. */
+.ts-shake{animation:none !important;transform:none !important}
+}

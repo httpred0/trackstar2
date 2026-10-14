@@ -1,0 +1,7 @@
+# Raw working files — not needed to run or rebuild the site
+uploads/
+screenshots/
+.thumbnail
+.claude/
+node_modules/
+.vercel

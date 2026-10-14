@@ -1,0 +1,7 @@
+# Design sources and working files — not needed on the live site
+*.dc.html
+Track Star/
+uploads/
+screenshots/
+.thumbnail
+.claude/
